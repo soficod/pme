@@ -1,23 +1,15 @@
 import React from 'react'
 import { useState } from 'react'
 import { useEffect } from 'react'
-import lang from '../../../services/lang'
+import { useLanguage } from '../../../services/useLanguage';
 import styles from '../../../../styles/landing_page/Presentation.module.css';
 
 const Presentation = ()=>{
     
-    const [language,setLanguage] = useState("en");
-
-    useEffect(()=>{
-        if(!window.localStorage.getItem("pme-lang"))
-            window.localStorage.setItem("pme-lang","fr");
-        setLanguage(window.localStorage.getItem("pme-lang")as string);
-    },[]);
-
+    const [lang, changeLanguage] = useLanguage();
     return(
         
-        <h1>{lang[language].Presentation.title}</h1>
-        
+        <h1>{lang.Navbar.news_link}</h1>
     )
 }
 export default Presentation;

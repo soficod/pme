@@ -1,0 +1,11 @@
+.mission_section 
+{
+    width: 100%;
+    height: 100vh;
+    overflow-y: hidden;
+    text-align: center;
+    z-index: 99;
+    background-color: white;
+    position: relative;
+}
+
