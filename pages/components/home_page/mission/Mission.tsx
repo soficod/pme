@@ -7,13 +7,19 @@ const Mission = () =>
     const {lang, changeLanguage} = useContext(langContext);
 
     return(
-        <>
-            <div className={styles.mission_section}>
-                <h1 className={styles.mission_title}>
-                    {lang.Mission.title}
-                </h1>
+        <section className={styles.mission_section}>
+            <h1 className={styles.mission_title}>
+                {lang.Mission.title}
+            </h1>
+            <div 
+                className="separator"
+                style={{
+                    margin: "auto"
+                }}
+            >
+                
             </div>
-        </>
+        </section>
     )
 }
 

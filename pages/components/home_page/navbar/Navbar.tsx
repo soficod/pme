@@ -23,10 +23,6 @@ const Navbar = () => {
                 :
                 <MobileNav styles={styles} />
             }
-
-            {
-                JSON.stringify({isMobile: isMobile})
-            }
         </>
     )
 }

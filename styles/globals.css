@@ -16,3 +16,10 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.separator
+{
+  background-color: #58C4DD;
+  width: 100px;
+  height: 5px;
+}

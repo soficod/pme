@@ -65,7 +65,7 @@
 .arrow
 {
     position: absolute;
-    top:O;
+    top:0;
   
     width: 100%;
     height:30px;
@@ -143,12 +143,6 @@
     display: flex;
     flex-direction: column;
 
-}
-.vide
-{
-    background-color: #58C4DD;
-    width: 100px;
-    height: 5px;
 }
 
 .image_1
