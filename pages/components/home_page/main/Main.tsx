@@ -17,7 +17,7 @@ const Main = () => {
                     options={{
                         "background": {
                             "color": {
-                                "value": "#F2F2F2"
+                                "value": "#FFFFFF"
                             }
                         },
                         "fullScreen": {
