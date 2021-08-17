@@ -25,6 +25,7 @@ const Home = () => {
       >
         <Navbar/>
         <Main />
+        <Presentation />
         <Mission />
       </langContext.Provider>
     </>

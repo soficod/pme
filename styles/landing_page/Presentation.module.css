@@ -1,0 +1,257 @@
+.presentationContainer 
+{
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #213F59;
+    position: relative;
+    z-index: 202;
+}
+.maincontainer
+{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: white;
+    flex-wrap: wrap;
+    padding-top:100px;
+  
+
+}
+
+.shape
+{
+    position: absolute;
+    top:O;
+    width: 100%;
+    height:70px;
+    background-color:#fff;
+
+ 
+
+}
+.shape::before{
+    content: "";
+    color: black;
+    position: absolute;
+    width:50%;
+    height:60px;
+    background-color: #213F59;
+    transform: skewY(5deg);
+    top:40px;
+    left:0px;
+}
+.shape::after{
+    content: "";
+    color: black;
+    position: absolute;
+    width:50%;
+    height:60px;
+    background-color: #213F59;
+    transform: skewY(-5deg);
+    top:40px;
+    right:0px;
+}
+/*.arrow
+{
+    position: relative;
+    top:10px;
+    width:100vw;
+    height: auto;
+     <img src="images/arrow.png" className={styles.arrow} />
+}*/
+.arrow
+{
+    position: absolute;
+    top:O;
+  
+    width: 100%;
+    height:30px;
+
+
+}
+.arrowhite
+{
+    position: absolute;
+  
+ 
+    width: 100%;
+    height:10px;
+}
+.arrowhite::before
+{
+    content: "";
+    background-color: white;
+    position: absolute;
+    width:50%;
+    height:30px;
+ 
+    transform: skewY(3deg);
+    top:15px;
+    left:0px;
+}
+.arrowhite::after
+{
+    content: "";
+    background-color: white;
+    position: absolute;
+    width:50%;
+    height:30px;
+    margin-bottom: 10px;
+    transform: skewY(-3deg);
+    top:15px;
+    right:0px;
+}
+.arrow::before
+{
+    content: "";
+
+    position: absolute;
+    width:50%;
+    height:24px;
+    background-color: #58C4DD;
+    transform: skewY(5deg);
+    top:30px;
+    left:0px;
+}
+.arrow::after{
+    content: "";
+    color: black;
+    position: absolute;
+    width:50%;
+    height:24px;
+    background-color:#58C4DD;
+    transform: skewY(-5deg);
+    top:30px;
+    right:0px;
+}
+.imageContainer
+{
+    width: 500px;
+    height:500px;
+  
+    margin-right: 30px;
+    position:relative;
+    
+}
+.container
+{
+    width:500px;
+    height:500px;
+    display: flex;
+    flex-direction: column;
+
+}
+.vide
+{
+    background-color: #58C4DD;
+    width: 100px;
+    height: 5px;
+}
+
+.image_1
+{
+   position:absolute;
+    width: 100px;
+    bottom: 0px;
+    right:0px;
+}
+.image_2
+{
+   position: absolute;
+    top:0px;
+    left: 0px;
+    width: 100px;
+    
+}
+.imglobal
+{
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    z-index: 99;
+
+}
+
+.box
+{
+    width:30px;
+    height:200px;
+    background-color: #58C4DD;
+    position:absolute;
+    right:0px;
+    
+}
+
+.foot
+{
+    position: relative;
+    bottom:0px;
+    width: 100%;
+    height:70px;
+    background-color: #213F59;
+
+    z-index: 202;
+ 
+}
+.foot::before{
+    content: "";
+    color: black;
+    position: absolute;
+    width:50%;
+    height:60px;
+    background-color:  #213F59;
+    transform: skewY(5deg);
+    top:40px;
+    left:0px;
+}
+.foot::after{
+    content: "";
+    color: black;
+    position: absolute;
+    width:50%;
+    height:60px;
+    background-color:  #213F59;
+    transform: skewY(-5deg);
+    top:40px;
+    right:0px;
+}
+@media only screen and (max-width:1100px)
+{
+    .container
+    {
+     
+        height: 400px;
+        height: 350px;
+        padding: 10px;
+      
+    }
+
+
+.imageContainer
+{
+    width:400px;
+    height: 350px;
+   
+}
+.imglobal
+{
+    width: 300px;
+}
+.image_1{
+    width:80px;
+}
+.image_2
+{
+    width:80px;
+}
+.box
+{
+    display: none;
+}
+}
