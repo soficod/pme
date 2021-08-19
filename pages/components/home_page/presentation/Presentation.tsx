@@ -30,7 +30,11 @@ const Presentation = () =>
                             typeof(lang.Presentation) != "undefined"
                             ?
                             <>
-                                <h1>{lang.Presentation.title}</h1>
+                                <h1 style={{
+                                    paddingTop:"25px"
+                                }}>
+                                    {lang.Presentation.title}
+                                </h1>
                                 <div className="separator"></div>
                                 <p>{lang.Presentation.text}</p>
                             </>

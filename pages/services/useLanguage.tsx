@@ -19,7 +19,31 @@ lang = {
             
         },
         "Mission": {
-            "title": "Notre mission"
+            "title": "Notre mission",
+            "missions": [{
+                title: "Mission 1",
+                content: `
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit amet, 
+                    consectetur adipiscing elit.
+                `
+            },
+            {
+                title: "Mission 2",
+                content: `
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit amet, 
+                    consectetur adipiscing elit.
+                `
+            },
+            {
+                title: "Mission 3",
+                content: `
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit amet, 
+                    consectetur adipiscing elit.
+                `
+            }]
         }
     },
     "en":{
@@ -41,7 +65,31 @@ lang = {
             
         },
         "Mission": {
-            "title": "Our mission"
+            "title": "Our mission",
+            "missions": [{
+                title: "Mission 1",
+                content: `
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit amet, 
+                    consectetur adipiscing elit.
+                `
+            },
+            {
+                title: "Mission 2",
+                content: `
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit amet, 
+                    consectetur adipiscing elit.
+                `
+            },
+            {
+                title: "Mission 3",
+                content: `
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit amet, 
+                    consectetur adipiscing elit.
+                `
+            }]
         }
     }
     
