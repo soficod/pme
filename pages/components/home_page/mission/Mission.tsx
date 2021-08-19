@@ -5,39 +5,12 @@ import { motion } from 'framer-motion';
 
 const Mission = () => 
 {
+
     const selectedBtnStyle = {
         backgroundColor: "#58C4DD",
         color:"white",
         boxShadow: "0px 0px 36px 1px #58C4DD"
     }
-    
-
-    const missions = [
-        {
-            title: "Mission 1",
-            content: `
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit amet, 
-                consectetur adipiscing elit.
-            `
-        },
-        {
-            title: "Mission 2",
-            content: `
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit amet, 
-                consectetur adipiscing elit.
-            `
-        },
-        {
-            title: "Mission 3",
-            content: `
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit amet, 
-                consectetur adipiscing elit.
-            `
-        }
-    ]
 
     const {lang, changeLanguage} = useContext(langContext);
     const [selected, setSelected] = useState(-1);
@@ -133,11 +106,11 @@ const Mission = () =>
                             selected !== -1 && 
                             <motion.div>
                                 <h1>
-                                    {missions[selected].title}
+                                    {lang.Mission.missions[selected].title}
                                 </h1>
 
                                 <p>
-                                    {missions[selected].content}
+                                    {lang.Mission.missions[selected].content}
                                 </p>
                             </motion.div>
                         }
