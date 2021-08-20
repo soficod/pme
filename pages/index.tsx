@@ -9,6 +9,9 @@ import Presentation from './components/home_page/presentation/Presentation';
 import { useLanguage } from './services/useLanguage';
 import { langContext } from './services/langContext';
 import Rejoindre from './components/home_page/rejoindre/Rejoindre';
+import Numbers from './components/home_page/numbers/Numbers';
+import Events from './components/home_page/events/Events';
+
 const Home = () => {
   
   const [lang, changeLanguage] = useLanguage();
@@ -29,6 +32,8 @@ const Home = () => {
           <Presentation />
           <Mission/>
           <Rejoindre/>
+          <Events />
+          <Numbers />
         </langContext.Provider>
     }
     </>

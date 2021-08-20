@@ -1,0 +1,15 @@
+.events_section 
+{
+    width: 100%;
+    min-height: 100vh;
+    text-align: center;
+    z-index: 200;
+    background-color: white;
+    position: relative;
+}
+
+.events_title 
+{
+    padding-top: 100px;
+    font-size: 2em;
+}
