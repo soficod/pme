@@ -9,10 +9,10 @@ const Presentation = () =>
     return(
         <>
             <div className={styles.presentationContainer}>
-                <div className={styles.shape}></div>
+                    <div className={styles.shape}></div>
 
-                <div className={styles.arrow}></div>
-                <div className={styles.arrowhite}></div>
+                    <div className={styles.arrow}></div>
+                    <div className={styles.arrowhite}></div>
                 <div className={styles.maincontainer}>
                 <div className={styles.box}></div> 
                     <motion.div 
@@ -25,6 +25,7 @@ const Presentation = () =>
                             x:0,
                             opacity:1
                         }}
+                        
                     >
                         { 
                             typeof(lang.Presentation) != "undefined"
@@ -32,7 +33,7 @@ const Presentation = () =>
                             <>
                                 <h1>{lang.Presentation.title}</h1>
                                 <div className="separator"></div>
-                                <p>{lang.Presentation.text}</p>
+                                <p className={styles.text}>{lang.Presentation.text}</p>
                             </>
                             :
                             <>

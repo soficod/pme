@@ -1,0 +1,269 @@
+.rejoindreContainer
+{
+    width: 100%;
+    height: 100%;
+    background-color:#47627A;
+    position: relative;
+    z-index: 210;
+}
+.maincontainer
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: white;
+    flex-wrap: wrap;
+    padding-top:100px;
+   
+    padding-right:10px ;
+ 
+}
+.shape
+{
+    position: absolute;
+    top:O;
+    width: 100%;
+    height:70px;
+    background-color:#fff;
+
+ 
+
+}
+.shape::before{
+    content: "";
+    color: black;
+    position: absolute;
+    width:50%;
+    height:60px;
+    background-color: #47627A;
+    transform: skewY(5deg);
+    top:40px;
+    left:0px;
+}
+.shape::after{
+    content: "";
+    color: black;
+    position: absolute;
+    width:50%;
+    height:60px;
+    background-color: #47627A;
+    transform: skewY(-5deg);
+    top:40px;
+    right:0px;
+}
+.arrow
+{
+    position: absolute;
+    top:0;
+  
+    width: 100%;
+    height:30px;
+
+
+}
+.arrowhite
+{
+    position: absolute;
+  
+ 
+    width: 100%;
+    height:10px;
+}
+.arrowhite::before
+{
+    content: "";
+    background-color: white;
+    position: absolute;
+    width:50%;
+    height:30px;
+ 
+    transform: skewY(3deg);
+    top:15px;
+    left:0px;
+}
+.arrowhite::after
+{
+    content: "";
+    background-color: white;
+    position: absolute;
+    width:50%;
+    height:30px;
+    margin-bottom: 10px;
+    transform: skewY(-3deg);
+    top:15px;
+    right:0px;
+}
+.arrow::before
+{
+    content: "";
+
+    position: absolute;
+    width:50%;
+    height:24px;
+    background-color: #58C4DD;
+    transform: skewY(5deg);
+    top:30px;
+    left:0px;
+}
+.arrow::after{
+    content: "";
+    color: black;
+    position: absolute;
+    width:50%;
+    height:24px;
+    background-color:#58C4DD;
+    transform: skewY(-5deg);
+    top:30px;
+    right:0px;
+}
+.container
+{
+    width:500px;
+    min-height:500px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+
+ 
+
+}
+.imageContainer
+{
+    width: 500px;
+    height:500px;
+
+    position:relative;
+    border-radius: 45%;
+    
+    border: 6px solid #58C4DD;
+    background-image: url("/images/men.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(255,255,255,0.4);
+    margin-left: 50px;
+  
+    
+
+
+    
+    
+}
+.cercle
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-color: blanchedalmond;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 15px;
+
+
+    
+}
+.foot
+{
+    position: relative;
+    bottom:0px;
+    width: 100%;
+    height:70px;
+    background-color: #47627A;
+    z-index: 202;
+ 
+}
+.foot::before{
+    content: "";
+    color: black;
+    position: absolute;
+    width:50%;
+    height:60px;
+    background-color:  #47627A;
+    transform: skewY(5deg);
+    top:40px;
+    left:0px;
+}
+.foot::after{
+    content: "";
+    color: black;
+    position: absolute;
+    width:50%;
+    height:60px;
+    background-color:  #47627A;
+    transform: skewY(-5deg);
+    top:40px;
+    right:0px;
+}
+.box
+{
+    width:15px;
+    height:200px;
+    background-color: #58C4DD;
+    position:absolute;
+    left:0px;
+ 
+}
+.title{
+    font-size: 2.5em;
+   
+}
+.text
+{
+   text-align: justify;
+}
+
+@media only screen and (max-width:1100px)
+{
+    .container
+    {
+     
+        height: 400px;
+        min-height: 350px;
+        margin:10px;
+        padding: 20px;
+        
+      
+    }
+
+
+.imageContainer
+{
+    width:350px;
+    height: 350px;
+    margin-left: 30px;
+
+}
+
+.box
+{
+    display: none;
+}
+}
+@media only screen and (max-width:400px)
+{
+        .imageContainer
+        {
+            width:300px;
+            height: 300px;
+            margin-left: 20px;
+        
+        }
+
+        .cercle
+        {
+            width:100px;
+            height:100px;
+        }
+        .title
+        {
+            font-size: 2em;
+        }
+}
