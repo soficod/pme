@@ -8,6 +8,7 @@ import Mission from './components/home_page/mission/Mission';
 import Presentation from './components/home_page/presentation/Presentation';
 import { useLanguage } from './services/useLanguage';
 import { langContext } from './services/langContext';
+import Rejoindre from './components/home_page/rejoindre/Rejoindre';
 const Home = () => {
   
   const [lang, changeLanguage] = useLanguage();
@@ -27,6 +28,7 @@ const Home = () => {
           <Main />
           <Presentation />
           <Mission/>
+          <Rejoindre/>
         </langContext.Provider>
     }
     </>

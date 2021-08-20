@@ -13,8 +13,7 @@ const Mission = () =>
     }
 
     const {lang, changeLanguage} = useContext(langContext);
-    const [selected, setSelected] = useState(-1);
-
+    const [selected, setSelected] = useState(0);
     return(
         <section className={styles.mission_section}>
             <div className={styles.whiteBg}></div>
@@ -104,7 +103,21 @@ const Mission = () =>
                     <div  className={styles.textContainer}>
                         {
                             selected !== -1 && 
-                            <motion.div>
+
+                            <motion.div
+                                initial={{
+                                    y: 20,
+                                    opacity: 0
+                                }}
+
+                                animate={{
+                                    y:0,
+                                    opacity:1
+                                }}
+                                transition={{
+                                    delay:1.75
+                                }}
+                            >
                                 <h1>
                                     {lang.Mission.missions[selected].title}
                                 </h1>
