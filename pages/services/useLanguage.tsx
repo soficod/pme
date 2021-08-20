@@ -51,6 +51,12 @@ lang = {
         },
         "Events":{
             "title":"NOS ÉVÉNEMENTS",
+        },
+        "Numbers": {
+            "signed": "INSCRITS",
+            "docs": "DOCUMENTS",
+            "events": "ÉVÉNEMENTS",
+            "sponsors": "SPONSORS"
         }
     },
     "en":{
@@ -104,6 +110,12 @@ lang = {
         },
         "Events":{
             "title":"OUR EVENTS",
+        },
+        "Numbers": {
+            "signed": "SIGNED",
+            "docs": "DOCUMENTS",
+            "events": "EVENTS",
+            "sponsors": "SPONSORS"
         }
     }
     

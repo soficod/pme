@@ -1,8 +1,50 @@
 .numContainer
 {
     width: 100%;
-    height: 400px;
+    height: 200px;
     background-color: black;
     position: relative;
     z-index: 200;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.numContainer > div
+{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.part1 > button,.part2 > button 
+{
+    font-size: 2em;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    color: white;
+    height: 100%;
+}
+
+
+@media only screen and (max-width: 800px)
+{
+    .numContainer
+    {
+        min-height: 400px;
+    }
+
+    .numContainer > div 
+    {
+        height: auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        width: 100%;
+    }
+
+    .numContainer > div > button 
+    {
+        font-size: 1.5em;
+    }
 }
