@@ -1,0 +1,8 @@
+.numContainer
+{
+    width: 100%;
+    height: 400px;
+    background-color: black;
+    position: relative;
+    z-index: 200;
+}

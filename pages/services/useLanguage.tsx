@@ -14,12 +14,12 @@ lang = {
             "join_us": ["Rejoignez nous!"]
         },
         "Presentation": {
-            "title": "Notre Présentation",
+            "title": "NOTRE PRÉSENTATION",
             "text":"Lorem ipsum dolor sit ametconsectetur, adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum"
             
         },
         "Mission": {
-            "title": "Notre mission",
+            "title": "NOTRE MISSION",
             "missions": [{
                 title: "Mission 1",
                 content: `
@@ -46,8 +46,11 @@ lang = {
             }],
         },
         "Rejoindre":{
-            "title":"POURQUOI NOUS REJOINDRE",
+            "title":"POURQUOI NOUS REJOINDRE ?",
             "text":"Lorem ipsum dolor sit ametconsectetur, adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum"
+        },
+        "Events":{
+            "title":"NOS ÉVÉNEMENTS",
         }
     },
     "en":{
@@ -64,12 +67,12 @@ lang = {
             "join_us": ["Join us now!"]
         },
         "Presentation": {
-            "title": "Our Presentation",
+            "title": "OUR PRESENTATION",
             "text":"Lorem ipsum dolor sit ametconsectetur, adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum"
             
         },
         "Mission": {
-            "title": "Our mission",
+            "title": "OUR MISSION",
             "missions": [{
                 title: "Mission 1",
                 content: `
@@ -96,8 +99,11 @@ lang = {
             }],
         },
         "Rejoindre":{
-            "title":"WHY JOIN US",
+            "title":"POURQUOI NOUS REJOINDRE ?",
             "text":"Lorem ipsum dolor sit ametconsectetur, adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum"
+        },
+        "Events":{
+            "title":"OUR EVENTS",
         }
     }
     
