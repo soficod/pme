@@ -5,92 +5,181 @@
     background-color: rgba(0, 0, 0, 0.8);
     position: relative;
     z-index: 200;
-}
-
-.formContainer 
-{
-    width: 400px;
-    text-align: center;
-    margin-left: 15px;
-}
-
-.footerContainer h1
-{
-    margin: 0;
-    padding: 0;
-}
-
-.formControl  
-{
-    font-size: 1em;
-    color: white;
-    margin-bottom: 15px;
-    text-align: left;
-}
-
-.formControl > input
-{
-    width: 100%;
-    height: 50px;
-    padding-left: 15px;
-    font-size: 1em;
-    border-radius: 3px;
-    border: none;
-    outline: none;
-    box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.2);
-}
-
-.formControl > textarea
-{
-    width: 100%;
-    height: 100px;
-    border-radius: 5px;
-    border: none;
-    outline: none;
-    box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.2);
-    padding-left: 15px;
-    padding-top: 5px;
-}
-
-.formContainer > button 
-{
-    width: 80%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    background-color: #213F59;
-    border: none;
-    border-radius: 10px;
-    font-size: 1em;
-    color: white;
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.2);
-}
-
-.firstHalf 
-{
     padding-top: 50px;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
 }
 
-.imgHolder 
+.contactContainer
 {
-    background-color: rgba(0, 0, 0, 0);
-    border: none;
-    outline: none;
+    width: 45%;
 }
 
-.firstHalf img 
+.contactContainer > img 
 {
     width: 500px;
 }
 
-.contactContainer 
+.form
 {
-    width: 400px;
-    margin-right: 15px;
+    width: 45%;
+}
+
+.firstHalf 
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.formContainer 
+{
+    width: 100%;
+}
+
+.nameAndEmail 
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nameAndEmail > input 
+{
+    width: 45%;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    height: 40px;
+    border-bottom: solid white 3px;
+    outline: none;
+    color: white;
+    transition: padding-left 0.2s ease;
+}
+
+.nameAndEmail > input::placeholder
+{
+    color: rgba(187, 187, 187, 0.719);
+    font-weight: lighter;
+}
+
+.nameAndEmail > input:focus 
+{
+    padding-left: 15px;
+}
+
+.nameAndEmail > input:nth-child(2)
+{
+    margin-right: 30px;
+}
+
+.formContainer > textarea 
+{
+    margin-top: 30px;
+    width: 95%;
+    height: 200px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    border-bottom: solid white 3px;
+    outline: none;
+    color: white;
+    transition: padding-left 0.2s ease;
+}
+
+.formContainer > textarea::placeholder
+{
+    color: rgba(187, 187, 187, 0.719);
+    font-weight: lighter;
+}
+
+.formContainer > textarea:focus 
+{
+    padding-left: 15px;
+}
+
+.nameAndEmail > input:focus 
+{
+    padding-left: 15px;
+}
+
+.send 
+{
+    border: none;
+    color: white;
+    background-color: #081743;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.contacts 
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.contactInfos
+{
+    border-right: solid #58C4DD 3px;
+    padding-right: 10px;
+}
+
+.socials 
+{
+    padding-left: 10px;
+}
+
+.secondHalf
+{
+    width: 100%;
+    padding-top: 100px;
+    text-align: center;
+    color: white;
+}
+
+.footerSeparator
+{
+    width: 300px;
+    height: 5px;
+    background-color: #081743;
+    margin: auto;
+}
+
+@media only screen and (max-width: 1090px)
+{
+    .form 
+    {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 80%;
+    }
+
+    .nameAndEmail
+    {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .nameAndEmail > input
+    {
+        width: 100%;
+    }
+
+    .nameAndEmail > input:nth-child(2)
+    {
+        margin-top: 30px;
+        margin-right: 0px;
+    }
+
+    .formContainer > textarea
+    {
+        margin-top: 30px;
+        width: 100%;
+    }
+
+    .contactContainer > img
+    {
+        width: 100%;
+    }
 }

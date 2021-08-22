@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import { langContext } from '../../../services/langContext';
 import styles from '../../../../styles/landing_page/Mission.module.css';
 import { motion } from 'framer-motion';
@@ -14,8 +14,26 @@ const Mission = () =>
 
     const {lang, changeLanguage} = useContext(langContext);
     const [selected, setSelected] = useState(0);
+
+    const [on, setOn] = useState(false);
+
+    useEffect(() => 
+    {
+        setOn(window.scrollY >= document.getElementById("mission_link").offsetTop);
+        window.addEventListener('scroll', e => 
+        {
+            if(document.readyState === 'complete' && 
+                !on && 
+                (window.scrollY >= document.getElementById("mission_link").offsetTop))
+            {
+                setOn(true);
+            }
+        });
+    }, []);
+
+
     return(
-        <section className={styles.mission_section}>
+        <section id="mission_link" className={styles.mission_section}>
             <div className={styles.whiteBg}></div>
             <div style={{
                 position:'relative',
@@ -34,73 +52,76 @@ const Mission = () =>
                 </div>
 
                 <div className={styles.bigCircle}>
-                    <div className={styles.icoContainer}>
-                        <motion.button 
-                            style={selected === 1 ? selectedBtnStyle:{}} 
-                            className={styles.ico} 
-                            onClick={e => setSelected(1)}
-                            initial={{
-                                scale: 0
-                            }}
-                            animate={{
-                                scale: 1
-                            }}
-                            transition={{
-                                duration: 1,
-                                delay: 1
-                            }}
-                        >
-                            <span  className="material-icons">
-                                campaign
-                            </span>
-                        </motion.button>
-                    </div>
+                    {
+                        on &&
+                        <>
+                            <div className={styles.icoContainer}>
+                                <motion.button 
+                                    style={selected === 1 ? selectedBtnStyle:{}} 
+                                    className={styles.ico} 
+                                    onClick={e => setSelected(1)}
+                                    initial={{
+                                        scale: 0
+                                    }}
+                                    animate={{
+                                        scale: 1
+                                    }}
+                                    transition={{
+                                        duration: 1,
+                                        delay: 1
+                                    }}
+                                >
+                                    <span  className="material-icons">
+                                        campaign
+                                    </span>
+                                </motion.button>
+                            </div>
 
-                    <div className={styles.btnsContainer} style={{
-                        display: "flex",
-                        justifyContent: "space-between",
-                    }}>
-                        <motion.button 
-                            style={selected === 0 ? selectedBtnStyle:{}} 
-                            className={styles.ico}
-                            onClick={e => setSelected(0)}
-                            initial={{
-                                scale: 0
-                            }}
-                            animate={{
-                                scale: 1
-                            }}
-                            transition={{
-                                duration: 1,
-                            }}
-                        >
-                            <span className="material-icons">
-                                business_center
-                            </span>
-                        </motion.button>
+                            <div className={styles.btnsContainer} style={{
+                                display: "flex",
+                                justifyContent: "space-between",
+                            }}>
+                                <motion.button 
+                                    style={selected === 0 ? selectedBtnStyle:{}} 
+                                    className={styles.ico}
+                                    onClick={e => setSelected(0)}
+                                    initial={{
+                                        scale: 0
+                                    }}
+                                    animate={{
+                                        scale: 1
+                                    }}
+                                    transition={{
+                                        duration: 1,
+                                    }}
+                                >
+                                    <span className="material-icons">
+                                        business_center
+                                    </span>
+                                </motion.button>
 
-                        <motion.button 
-                            style={selected === 2 ? selectedBtnStyle:{}} 
-                            className={styles.ico}
-                            onClick={e => setSelected(2)}
-                            initial={{
-                                scale: 0
-                            }}
-                            animate={{
-                                scale: 1
-                            }}
-                            transition={{
-                                duration: 1,
-                                delay: 1.5
-                            }}
-                        >
-                            <span className="material-icons">
-                                handyman
-                            </span>
-                        </motion.button>
-                    </div>
+                                <motion.button 
+                                    style={selected === 2 ? selectedBtnStyle:{}} 
+                                    className={styles.ico}
+                                    onClick={e => setSelected(2)}
+                                    initial={{
+                                        scale: 0
+                                    }}
+                                    animate={{
+                                        scale: 1
+                                    }}
+                                    transition={{
+                                        duration: 1,
+                                        delay: 1.5
+                                    }}
+                                >
+                                    <span className="material-icons">
+                                        handyman
+                                    </span>
+                                </motion.button>
+                            </div>
 
-                    <div  className={styles.textContainer}>
+                            <div  className={styles.textContainer}>
                         {
                             selected !== -1 && 
 
@@ -128,6 +149,8 @@ const Mission = () =>
                             </motion.div>
                         }
                     </div>
+                        </>
+                    }
                 </div>
             </div>
         </section>
