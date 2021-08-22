@@ -57,6 +57,16 @@ lang = {
             "docs": "DOCUMENTS",
             "events": "ÉVÉNEMENTS",
             "sponsors": "SPONSORS"
+        },
+        "Footer": {
+            "input_name": "Nom complet",
+            "input_email": "Adresse email",
+            "input_object": "Objet",
+            "input_content": "Message",
+            "input_send": "Envoyer",
+            "find_us": "Retrouvez nous ici",
+            "contact": "Envoyez-nous un message",
+            "all_rights": "Tous droits réservés"
         }
     },
     "en":{
@@ -116,6 +126,16 @@ lang = {
             "docs": "DOCUMENTS",
             "events": "EVENTS",
             "sponsors": "SPONSORS"
+        },
+        "Footer": {
+            "input_name": "Full name",
+            "input_email": "Email address",
+            "input_object": "Object",
+            "input_content": "Message",
+            "input_send": "Send",
+            "find_us": "Find us here",
+            "contact": "Send us a message",
+            "all_rights": "All rights reserved"
         }
     }
     
