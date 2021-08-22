@@ -19,12 +19,12 @@ const Mission = () =>
 
     useEffect(() => 
     {
-        setOn(window.scrollY >= document.getElementById("mission_link").offsetTop);
+        setOn(window.scrollY >= document.getElementById("mission_link").offsetTop - 50);
         window.addEventListener('scroll', e => 
         {
             if(document.readyState === 'complete' && 
                 !on && 
-                (window.scrollY >= document.getElementById("mission_link").offsetTop))
+                (window.scrollY >= document.getElementById("mission_link").offsetTop - 50))
             {
                 setOn(true);
             }
@@ -68,7 +68,7 @@ const Mission = () =>
                                     }}
                                     transition={{
                                         duration: 1,
-                                        delay: 1
+                                        delay: 0.25
                                     }}
                                 >
                                     <span  className="material-icons">
@@ -112,7 +112,7 @@ const Mission = () =>
                                     }}
                                     transition={{
                                         duration: 1,
-                                        delay: 1.5
+                                        delay: 0.5
                                     }}
                                 >
                                     <span className="material-icons">

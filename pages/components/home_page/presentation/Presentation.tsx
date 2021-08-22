@@ -30,10 +30,11 @@ const Presentation = () =>
                     <div className={styles.arrow}></div>
                     <div className={styles.arrowhite}></div>
                 <div className={styles.maincontainer}>
-                <div className={styles.box}></div> 
                 {
                     on &&
                     <>
+                    <div className={styles.box}></div> 
+                
                     <motion.div 
                         className={styles.container}
                         initial={{
