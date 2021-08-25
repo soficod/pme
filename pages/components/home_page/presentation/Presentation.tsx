@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { langContext } from '../../../services/langContext';
 import { motion } from 'framer-motion';
 import styles from '../../../../styles/landing_page/Presentation.module.css';
@@ -6,15 +6,35 @@ import styles from '../../../../styles/landing_page/Presentation.module.css';
 const Presentation = () => 
 {
     const {lang, changeLanguage} = useContext(langContext);
+    const [on, setOn] = useState(false);
+
+    useEffect(() => 
+    {
+        setOn(window.scrollY >= document.getElementById("presentation_link").offsetTop);
+        window.addEventListener('scroll', e => 
+        {
+            if(document.readyState === 'complete' && 
+                !on && 
+                (window.scrollY >= document.getElementById("presentation_link").offsetTop))
+            {
+                setOn(true);
+            }
+        });
+    }, []);
+
     return(
         <>
-            <div className={styles.presentationContainer}>
+            <div id="presentation_link" className={styles.presentationContainer}>
                     <div className={styles.shape}></div>
 
                     <div className={styles.arrow}></div>
                     <div className={styles.arrowhite}></div>
                 <div className={styles.maincontainer}>
-                <div className={styles.box}></div> 
+                {
+                    on &&
+                    <>
+                    <div className={styles.box}></div> 
+                
                     <motion.div 
                         className={styles.container}
                         initial={{
@@ -24,6 +44,9 @@ const Presentation = () =>
                         animate ={{
                             x:0,
                             opacity:1
+                        }}
+                        transition={{
+                            duration: 1
                         }}
                         
                     >
@@ -70,13 +93,17 @@ const Presentation = () =>
                             x:0,
                             opacity:1
                         }}
+                        transition={{
+                            duration: 1
+                        }}
                     >
                         <img className={styles.image_1} src="images/Rectangle.png"/>
                         <img className={styles.imglobal} src="images/woman.png"/>
                         <img className={styles.image_2} src="images/Tracé.png"/>
                 
                     </motion.div>
-                
+                    </>
+                }
             
                 </div>
             </div>

@@ -135,3 +135,16 @@
     background-color: royalblue;
     color: white;
 }
+
+.stickyLogo 
+{
+    margin-left: 15px;
+    width: 150px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.stickyLogo img 
+{
+    width: 100%;
+}
