@@ -58,6 +58,14 @@ lang = {
             "events": "ÉVÉNEMENTS",
             "sponsors": "SPONSORS"
         },
+        "Sponsors": {
+            "organizers": "ORGANISATEURS",
+            "partners": "NOS PARTENAIRES",
+            "sponsors": "NOS SPONSORS",
+            "silver": "ARGENT",
+            "gold": "OR",
+            "diamond": "DIAMANT"
+        },
         "Footer": {
             "input_name": "Nom complet",
             "input_email": "Adresse email",
@@ -126,6 +134,14 @@ lang = {
             "docs": "DOCUMENTS",
             "events": "EVENTS",
             "sponsors": "SPONSORS"
+        },
+        "Sponsors": {
+            "organizers": "ORGANIZERS",
+            "partners": "OUR PARTNERS",
+            "sponsors": "OUR SPONSORS",
+            "silver": "SILVER",
+            "gold": "GOLD",
+            "diamond": "DIAMOND"
         },
         "Footer": {
             "input_name": "Full name",
