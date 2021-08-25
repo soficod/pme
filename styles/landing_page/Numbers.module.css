@@ -1,16 +1,29 @@
 .numContainer
 {
     width: 100%;
-    height: 200px;
-    background-color: black;
+    height: 250px;
+    background-image: url("/images/NumberSection.png");
     position: relative;
     z-index: 200;
+}
+
+.darkBg 
+{
+    width: 100vw;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-.numContainer > div
+.num 
+{
+    color: #FFD500;
+    font-size: 2em;
+}
+
+.darkBg > div
 {
     height: 100%;
     width: 50%;
@@ -20,7 +33,7 @@
 
 .part1 > button,.part2 > button 
 {
-    font-size: 2em;
+    font-size: 1.8em;
     background-color: rgba(0, 0, 0, 0);
     border: none;
     color: white;
@@ -35,7 +48,7 @@
         min-height: 400px;
     }
 
-    .numContainer > div 
+    .darkBg > div 
     {
         height: auto;
         margin-top: 30px;
@@ -43,7 +56,7 @@
         width: 100%;
     }
 
-    .numContainer > div > button 
+    .darkBg > div > button 
     {
         font-size: 1.5em;
     }
