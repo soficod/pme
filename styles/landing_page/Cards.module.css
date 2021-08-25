@@ -1,0 +1,127 @@
+.cards_container
+{
+    width:100vh;
+    min-height:400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+    overflow: hidden;
+   
+
+}
+.card{
+    width:250px;
+    height:300px;
+    margin:25px;
+    border-radius: 25px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(245, 229, 229, 0.158), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: 2px solid rgba(180, 179, 179, 0.342);
+    z-index: 400;
+}
+.imageContainer
+{
+    width: 100%;
+    height:140px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("/images/meeting.jpg");
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    
+}
+
+.cards_text
+{
+    width:100%;
+    height:100px;
+    justify-content: center;
+    padding: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+
+
+
+}
+.cards_button
+{
+    width:100px;
+    border-radius: 25px;
+    padding: 5px;
+    margin: auto;
+    border: 1px solid black;
+    background-color: white;
+    position: relative;
+    bottom: 10px;
+}
+.cards_button :hover
+{
+    width:120px;
+    border: cyan;
+}
+.trace
+{
+    position:absolute;
+    left:-20px;
+    top:38px;
+   
+}
+.rectangle
+{
+    position: absolute;
+    top:100px;
+    left:-38.5px;
+    z-index:-1;
+   
+}
+.number
+{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+.cardsDate
+{
+    color:white;
+    z-index:300;
+    position: relative;
+    top:50px;
+    left:-80px;
+ 
+}
+.date
+{
+    font-size:0.9em;
+}
+
+@media only screen and (max-width:400px)
+{
+    .cardsDate
+    {
+        position:absolute;
+        left:0px;
+        text-align:center;
+        top:45px;
+    }
+    .trace
+    {
+        position:absolute;
+        left:-20px;
+        top:32px;
+    
+    }
+    .rectangle
+    {
+        position: absolute;
+        top:95px;
+        left:-38.5px;
+        z-index:-1;
+    
+    }
+}
+
+

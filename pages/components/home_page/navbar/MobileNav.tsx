@@ -85,17 +85,7 @@ const MobileNav = ({styles}:any) => {
                             {
                                 Object.keys(lang.Navbar).map(link => {
                                     return (
-                                        <a
-                                            onClick={e => {
-                                                    window.scrollTo({
-                                                        top: document.getElementById(link).offsetTop,
-                                                        behavior: "smooth"
-                                                    })
-
-                                                    setNavOn(false);
-                                                }
-                                            } 
-                                        >
+                                        <a href={"#"+link}>
                                             <button className={styles.navElemMobile}>
                                                 {lang.Navbar[link]}
                                             </button>

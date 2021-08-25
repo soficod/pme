@@ -1,0 +1,125 @@
+.cardContainer
+{
+    width:90%;
+    min-height:500px;
+    border:1px solid gray;
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+    justify-items: center;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px 0 rgba(245, 229, 229, 0.158), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: 2px solid rgba(180, 179, 179, 0.342);
+
+}
+.container
+{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    width:100%;
+    height:100%;
+    padding: 30px;
+}
+
+.textContainer
+{
+    display: flex;
+    flex-direction:column;
+    width:540px;
+    padding: 20px;
+    margin-left:10px;
+    position: relative;
+
+  
+  
+}
+
+.imageContainer
+{
+ width: 500px;
+    
+}
+.doctitle
+{
+    text-align:center;
+    font-size:2.5em;
+ 
+}
+.text
+{
+ font-size:1.2em;
+
+ text-align: justify;
+ justify-content: center;
+ 
+
+}
+.cardButton{
+    width:150px;
+    border-radius: 25px;
+    padding: 10px;
+    margin:0 auto;
+    border: 1px solid black;
+    background-color: white;
+    margin-top:20px;
+  
+ 
+
+}
+.image{
+    width:100%;
+}
+@media only screen and (max-width:1200px)
+{
+    .doctitle
+    {
+        text-align:center;
+        font-size: 2em;
+
+    
+    }
+    .text{
+        font-size: 1em;
+    }
+}
+@media only screen and (max-width:1100px)
+{
+    .imageContainer{
+        display: none;
+    }
+    .textContainer{
+        width: 600px;
+    }
+    .doctitle
+    {
+        text-align:center;
+        font-size: 2em;
+    
+    
+    }
+    .text
+    {
+        font-size: 1em;
+    }
+    .container
+    {
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        margin-block-end:0px;
+        margin-block-end: 0px;
+      
+    }
+    .cardContainer
+    {
+        min-height:350px;
+     
+        
+    }
+    .cardButton{
+        margin-top:80px;
+    }
+
+    
+}

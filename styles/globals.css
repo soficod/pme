@@ -30,3 +30,47 @@ button
 {
   -webkit-tap-highlight-color: transparent;
 }
+.rec.rec-dot {
+
+  background-color: transparent;
+
+}
+.rec.rec-dot.rec-dot_active
+{
+  box-shadow: 0 0 1px 3px #081744;
+  background-color:#081744;
+  -webkit-box-shadow: 0 0 1px 3px rgb(73, 73, 116/78%);
+ 
+}
+.rec.rec-dot.rec-dot_active:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 1px 3px rgb(73, 73, 116/78%);
+  box-shadow: 0 0 1px 3px #081744;
+  background-color:#081744;
+}
+
+
+.rec.rec-dot:hover{
+  box-shadow: 0 0 1px 3px rgb(6, 6, 51);
+  -webkit-box-shadow: 0 0 1px 3px rgba(16, 43, 131, 0.295);
+}
+
+.rec.rec-arrow.rec-arrow-right:hover,.rec.rec-arrow.rec-arrow-right:focus,.rec.rec-arrow.rec-arrow-right:active{
+  background-color: rgb(6, 6, 51);
+  color:#fff;
+  
+  
+}
+
+.rec.rec-arrow.rec-arrow-left:hover,.rec.rec-arrow.rec-arrow-left:focus,.rec.rec-arrow.rec-arrow-left:active{
+  background-color: rgb(6, 6, 51);
+  color:#fff;
+  
+}
+@media only screen and (max-width:700px)
+{
+  .rec.rec-arrow{
+    display: none;
+  }
+}
+

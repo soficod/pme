@@ -6,7 +6,7 @@ import { Style } from '@material-ui/icons';
 
 const Rejoindre = ()=>{
 
-    const {lang, changeLanguage} = useContext(langContext);
+    const {lang, changeLanguage:any} = useContext(langContext);
 
      return(
         <>
@@ -18,13 +18,34 @@ const Rejoindre = ()=>{
 
                 <div className={styles.maincontainer}>
                 <div className={styles.box}></div> 
-                        <div className={styles.container}>
+                        <motion.div 
+                            initial={{
+                                x:-100,
+                                opacity:0
+                            }}
+                            animate ={{
+                                x:0,
+                                opacity:1
+                            }}
+                        className={styles.container}>
                             <h1 className={styles.title}>{lang.Rejoindre.title}</h1>
                             <div className="separator"></div>
                             <p className={styles.text}>{lang.Rejoindre.text}</p>
-                        </div>
+                        </motion.div>
                 
-                        <div className={styles.imageContainer}>
+                        <motion.div 
+                            initial={{
+                                x:100,
+                                opacity:0
+                            }}
+                            animate ={{
+                                x:0,
+                                opacity:1
+                            }}
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
+                        
+                            className={styles.imageContainer}>
 
                             <div className={styles.cercle}>
                            <svg 
@@ -48,7 +69,7 @@ const Rejoindre = ()=>{
                             </g>
                             </svg>
                             </div>
-                        </div>
+                        </motion.div>
 
 
                 </div>

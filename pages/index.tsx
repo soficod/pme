@@ -11,12 +11,15 @@ import { langContext } from './services/langContext';
 import Rejoindre from './components/home_page/rejoindre/Rejoindre';
 import Numbers from './components/home_page/numbers/Numbers';
 import Events from './components/home_page/events/Events';
-import Footer from './components/home_page/footer/Footer';
-import Sponsors from './components/home_page/sponsors/Sponsors';
+import Documents from './components/home_page/documents/Documents';
+
+
 
 const Home = () => {
   
   const [lang, changeLanguage] = useLanguage();
+
+
 
   return (
     <>
@@ -36,8 +39,7 @@ const Home = () => {
           <Rejoindre/>
           <Events />
           <Numbers />
-          <Sponsors />
-          <Footer />
+          <Documents/>
         </langContext.Provider>
     }
     </>
