@@ -12,6 +12,7 @@ import Rejoindre from './components/home_page/rejoindre/Rejoindre';
 import Numbers from './components/home_page/numbers/Numbers';
 import Events from './components/home_page/events/Events';
 import Footer from './components/home_page/footer/Footer';
+import Sponsors from './components/home_page/sponsors/Sponsors';
 
 const Home = () => {
   
@@ -35,6 +36,7 @@ const Home = () => {
           <Rejoindre/>
           <Events />
           <Numbers />
+          <Sponsors />
           <Footer />
         </langContext.Provider>
     }
