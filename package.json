@@ -11,8 +11,10 @@
   "dependencies": {
     "@material-ui/core": "^4.12.3",
     "@material-ui/icons": "^4.11.2",
+    "@types/prop-types": "^15.7.4",
     "framer-motion": "^4.1.17",
     "next": "11.0.1",
+    "prop-types": "^15.7.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-elastic-carousel": "^0.11.5",

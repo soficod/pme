@@ -39,7 +39,7 @@ const Events = () =>
                 </div>
                 
                 <div className={styles.carouselContainer}>
-                    <Carousel isRTL={true} breakPoints={breakPoints}>
+                    <Carousel isRTL={true} breakPoints={breakPoints} enableAutoPlay={true}>
                         <Cards/>
                         <Cards/>
                         <Cards/>
