@@ -1,7 +1,4 @@
 import Head from 'next/head';
-import Image from 'next/image';
-import styles from '../styles/Home.module.css';
-import { useState, useEffect } from 'react';
 import Navbar from './components/home_page/navbar/Navbar';
 import Main from './components/home_page/main/Main';
 import Mission from './components/home_page/mission/Mission';
@@ -19,8 +16,6 @@ import Footer from './components/home_page/footer/Footer';
 const Home = () => {
   
   const [lang, changeLanguage] = useLanguage();
-
-
 
   return (
     <>

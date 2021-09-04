@@ -42,8 +42,6 @@ const Rejoindre = ()=>{
                                 x:0,
                                 opacity:1
                             }}
-                            whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 0.9 }}
                         
                             className={styles.imageContainer}>
 

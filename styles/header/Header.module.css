@@ -1,0 +1,154 @@
+.headerContainer 
+{
+    width: 90%;
+    height: 40px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid rgb(240,240,240) 1px;
+    border-left: solid rgb(240,240,240) 1px;
+}
+
+.date 
+{
+    height: 100%;
+    display: flex;
+}
+
+.date button
+{
+    height: 100%;
+    font-size: 0.9em;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.sndContainer 
+{
+    height: 100%;
+    display: flex;
+    padding-left: 15px;
+}
+
+.sndContainer div 
+{
+    display: flex;
+    height: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.sndContainer .profil 
+{
+    border-left: solid rgb(240,240,240) 1px;
+    border-right: solid rgb(240,240,240) 1px;
+}
+
+.sndContainer div:hover 
+{
+    background-color: rgb(226, 226, 226);
+}
+
+.sndContainer div button
+{
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 1px;
+    cursor: pointer;
+}
+
+.message
+{
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    height: 100%;
+    border-right: solid rgb(240,240,240) 1px;
+}
+
+.message div 
+{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    margin-left: 19px;
+    margin-top: 4px;
+    padding: 0;
+}
+
+.message div:hover 
+{
+    background-color: red;
+}
+
+.langElem 
+{
+    display: flex;
+    flex-wrap: wrap;
+    border: none;
+}
+
+.langElem button 
+{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    cursor: pointer;
+}
+
+.langSelect  
+{
+    text-align: center;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+    border-radius: 5px;
+}
+
+.langSelect button 
+{
+    height: 30px;
+}
+
+.langSelect button:hover
+{
+    background-color: rgba(207, 207, 207, 0.5);
+}
+
+.sndContainer .search 
+{
+    height: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border-right: solid rgb(240,240,240) 1px;
+}
+
+.headerBottom 
+{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+.headerBottom > img 
+{
+    width: 250px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+@media only screen and (max-width: 800px)
+{
+    .headerContainer, .headerBottom
+    {
+        display: none;
+    }
+}
+

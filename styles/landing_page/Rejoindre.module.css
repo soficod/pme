@@ -152,6 +152,7 @@
     
     
 }
+
 .cercle
 {
     position: absolute;
@@ -165,11 +166,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-left: 15px;
-
-
-    
+    padding-left: 20px;
+    cursor: pointer;
 }
+
 .foot
 {
     position: relative;
