@@ -15,6 +15,9 @@ const Cards = ()=>
                          animate={{
                              opacity:1
                          }}
+                         transition={{
+                             delay:0.2
+                         }}
                          whileHover={{ scale: 1.1 }}
                          whileTap={{ scale: 0.9 }}
                         className={styles.card}>

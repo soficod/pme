@@ -6,6 +6,7 @@ import Cards from './Cards';
 import Carousel from 'react-elastic-carousel';
 
 
+
 const Events = () => 
 {
 
@@ -47,15 +48,17 @@ const Events = () =>
                         <Cards/>
                     </Carousel>
                 </div>
-                <motion.button 
+                <motion.button
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ 
                           scale: 0.9 
                       }}
-                
+
                     className={styles.events_button}>
+                    
                     <span className={styles.button_text}>
-                        voir tout les événements
+
+                        <a href="/event">voir tout les événements</a>
                     </span>
                 </motion.button>
             </div>

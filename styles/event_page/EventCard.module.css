@@ -1,0 +1,49 @@
+.cardSection
+{
+    width:100%;
+    height:100%;
+ 
+}
+
+.card
+{
+    background-color: white;
+    width:350px;
+    height:420px;
+    display: flex;
+    flex-direction: column;
+    position:relative;
+}
+.imageContainer
+{
+    width:100%;
+    height:320px;
+    background-image:url('/images/business-colleagues-rooftop-talking.jpg');
+    background-size: cover;
+}
+
+.info
+{
+    display: flex;
+    flex-direction: row-reverse;
+    
+    
+ 
+  
+}
+
+.events_title
+{
+    text-align: left;
+    font-size: 1.1em;
+    padding: 5px;
+}
+.date
+{
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.events_title a:hover
+{
+    color: rgb(70, 69, 69);
+}

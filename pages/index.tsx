@@ -12,8 +12,8 @@ import Rejoindre from './components/home_page/rejoindre/Rejoindre';
 import Numbers from './components/home_page/numbers/Numbers';
 import Events from './components/home_page/events/Events';
 import Documents from './components/home_page/documents/Documents';
-import Sponsors from './components/home_page/sponsors/Sponsors';
-import Footer from './components/home_page/footer/Footer';
+import Reviews from './components/home_page/reviews/Reviews';
+
 
 
 const Home = () => {
@@ -41,8 +41,7 @@ const Home = () => {
           <Events />
           <Numbers />
           <Documents/>
-          <Sponsors/>
-          <Footer />
+          <Reviews/>
         </langContext.Provider>
     }
     </>
