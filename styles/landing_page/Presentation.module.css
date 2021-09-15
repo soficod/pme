@@ -1,7 +1,7 @@
 .presentationContainer 
 {
-    width: 100vw;
-    min-height: 100vh;
+    width: 100%;
+    min-height: 100%;
     background-color: #213F59;
     position: relative;
     z-index: 202;

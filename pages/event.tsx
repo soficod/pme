@@ -1,28 +1,14 @@
-import { StylesProvider } from '@material-ui/styles'
 import React from 'react'
-import Allevents from './components/event_page/all_events/Allevents'
-import Cover from './components/event_page/all_events/Cover'
-import SlidesEvent from './components/event_page/all_events/SlidesEvent'
-import styles from '../styles/event_page/Event.module.css';
-import EventPage from './components/event_page/eventPage/EventPage'
+import EventPage from './components/event_page/eventPage/EventPage';
 
-const Event=()=>{
+const Event =()=>
+{
 
     return(
-
         <>
-
-           
-              <section className={styles.sectContainer}>
-
-                <Cover/>   
-                <SlidesEvent/>
-                <Allevents/>
-              </section>
-        
-       
-        
+            <EventPage/>
         </>
     )
 }
+
 export default Event;

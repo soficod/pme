@@ -1,7 +1,7 @@
 .cards_container
 {
-    width:100vh;
-    min-height:400px;
+    width:90%;
+    height:100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -12,7 +12,7 @@
 }
 .card{
     width:250px;
-    height:300px;
+    min-height:200px;
     margin:25px;
     border-radius: 25px;
     position: relative;
@@ -33,7 +33,6 @@
     background-image: url("/images/meeting.jpg");
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
-    
 }
 
 .cards_text

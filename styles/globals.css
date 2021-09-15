@@ -30,9 +30,12 @@ button
 {
   -webkit-tap-highlight-color: transparent;
 }
+
 .rec.rec-dot {
 
   background-color: transparent;
+  height: 7px;
+  width: 7px;
 
 }
 .rec.rec-dot.rec-dot_active
@@ -67,10 +70,31 @@ button
   color:#fff;
   
 }
+
+.image-gallery
+{
+  width:90%;
+  margin-left: 30px;
+}
+.react-calendar
+{
+  background-color: red;
+}
 @media only screen and (max-width:700px)
 {
   .rec.rec-arrow{
     display: none;
   }
+}
+@media only screen and (max-width:1200px)
+{
+.image-gallery
+{
+    width: auto;
+    margin: auto;
+ 
+}
+
+
 }
 
