@@ -1,11 +1,10 @@
-import React, { useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import { langContext } from '../../../services/langContext';
 import styles from '../../../../styles/landing_page/Documents.module.css';
-import { motion } from 'framer-motion';
 import DocumentCard from './DocumentCard';
 import Carousel from 'react-elastic-carousel';
 
-const Documents = ()=>{
+const Documents = ({documents}:any)=>{
 
     const {lang, changeLanguage}:any = useContext(langContext);
 
@@ -13,7 +12,6 @@ const Documents = ()=>{
 
     return(
         <section className={styles.documents_section}>
-
                 <div className={styles.container}
                     style={{
                         position:'relative',
@@ -34,25 +32,31 @@ const Documents = ()=>{
                         </div>
                          
                     <div className={styles.carouselContainer}>
-                      <Carousel isRTL={true} itemsToShow={1} >
-                       <DocumentCard/>
-                       <DocumentCard/>
-                       <DocumentCard/>
-                       <DocumentCard/>
+                        <Carousel isRTL={true} itemsToShow={1} >
+                        {
+                            documents.map((doc:any) => 
+                            {
+                                return(
+                                <DocumentCard
+                                    title={doc.title}
+                                    slug={doc.slug}
+                                    content={doc.content}   
+                                    images={doc.images}
+                                />
+                                )
+                            })
+                        }
                       </Carousel>
                   </div>
-                
-                        <motion.button 
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ 
-                          scale: 0.9 
-                      }}
-                
-                    className={styles.documents_button}>
-                    <span className={styles.button_text}>
-                       {lang.Documents.title}
-                    </span>
-                </motion.button>
+                    <a href="/documents">
+                    <button 
+                        className={"scale-up-hover scale-down-tap "+styles.documents_button}
+                    >
+                        <span className={styles.button_text}>
+                            {lang.Documents.title}
+                        </span>
+                    </button>
+                    </a>
                 
                 
                 </div>

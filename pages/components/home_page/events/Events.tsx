@@ -1,12 +1,11 @@
-import React, { useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import { langContext } from '../../../services/langContext';
 import styles from '../../../../styles/landing_page/Events.module.css';
-import { motion } from 'framer-motion';
 import Cards from './Cards';
 import Carousel from 'react-elastic-carousel';
 
 
-const Events = () => 
+const Events = ({events}:any) => 
 {
 
     const {lang, changeLanguage}:any = useContext(langContext);
@@ -18,7 +17,7 @@ const Events = () =>
     
     ];
     return(
-        <section className={styles.events_section}>
+        <section id="events_link" className={styles.events_section}>
             <div className={styles.container}
             style={{
                 position:'relative',
@@ -39,25 +38,32 @@ const Events = () =>
                 </div>
                 
                 <div className={styles.carouselContainer}>
-                    <Carousel isRTL={true} breakPoints={breakPoints}>
-                        <Cards/>
-                        <Cards/>
-                        <Cards/>
-                        <Cards/>
-                        <Cards/>
+                    <Carousel isRTL={false} breakPoints={breakPoints}>
+                        {
+                            events.map(event => 
+                            {
+                                return(
+                                    <Cards
+                                        slug={event.slug}
+                                        name={event.name}
+                                        images={event.images}
+                                        start={event.start}
+                                        end={event.end}
+                                    />
+                                )
+                            })
+                        }
+                        
                     </Carousel>
                 </div>
-                <motion.button 
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ 
-                          scale: 0.9 
-                      }}
-                
-                    className={styles.events_button}>
-                    <span className={styles.button_text}>
-                        voir tout les événements
-                    </span>
-                </motion.button>
+                <a href="#">
+                    <button 
+                    className={"scale-up-hover scale-down-tap " + styles.events_button}>
+                        <span className={styles.button_text}>
+                            Voir tout les événements
+                        </span>
+                    </button>
+                </a>
             </div>
 
         </section>

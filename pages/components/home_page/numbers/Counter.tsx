@@ -3,9 +3,10 @@ import React, { useState, useEffect } from 'react';
 interface Count {
     maxCount: number,
     speed: number
+    iter: number
 }
 
-const Counter = ({maxCount, speed}:Count) => 
+const Counter = ({maxCount, speed, iter}:Count) => 
 {
     const [count, setCount] = useState(0);
 
@@ -20,7 +21,7 @@ const Counter = ({maxCount, speed}:Count) =>
             }
             else 
             {
-                setCount(count => count < maxCount ? count + 1 : count);
+                setCount(count => count < maxCount ? count + iter : count);
             }
         }, speed);
     }, []);

@@ -8,7 +8,8 @@ lang = {
             "events_link": "Nos événements",
             "doc_link": "Nos documents",
             "contact_link": "Nous contacter",
-            "join_link": "Nous rejoindre"
+            "join_link": "Nous rejoindre",
+            "login_link": "Se connecter"
         },
         "Main": {
             "join_us": ["Rejoignez nous!"]
@@ -57,7 +58,7 @@ lang = {
             "signed": "INSCRITS",
             "docs": "DOCUMENTS",
             "events": "ÉVÉNEMENTS",
-            "sponsors": "SPONSORS"
+            "articles": "ARTICLES"
         },
         "Card":{
             "plus":"En savoir plus"
@@ -86,6 +87,45 @@ lang = {
             "find_us": "Retrouvez nous ici",
             "contact": "Envoyez-nous un message",
             "all_rights": "Tous droits réservés"
+        },
+        "Login": {
+            "title": "CONNEXION",
+            "mailHolder": "Adresse email",
+            "passwordHolder": "Mot de passe",
+            "forgotPassword": "Mot de passe oublié ?",
+            "register": "Pas encore membre ? Inscrivez-vous !"
+        },
+        "Register": {
+            "title": "INSCRIPTION",
+            "nameHolder": "Nom complet",
+            "addEmail": "Ajouter une adresse email",
+            "phoneHolder": "Numéro de téléphone",
+            "addPhone": "Ajouter un numéro de téléphone",
+            "login": "Vous avez déjà un compte ? connectez-vous !",
+            "townHolder": "Ville",
+            "websiteHolder": "Site web",
+            "addFax": "Ajouter un numéro de fax",
+            "faxHolder": "Numéro du fax",
+            "company": "Company",
+            "expert": "Expert",
+            "union": "Union",
+            "office": "Office",
+            "default_select": "Vous êtes....",
+            "registry": "Registre",
+            "approval": "Approbation",
+            "default_select_regType": "Type de registre",
+            "legal_form": "Formulaire legal",
+            "activity_area": "Zone d'activité",
+            "staff_number": "Nombre de staff",
+            "main_activity": "Activité principale",
+            "creation_date": "Date de création",
+            "description": "Description",
+            "area": "Zone",
+            "addArea": "Ajouter une zone",
+            "companyNameHolder": "Nom de la companie"
+        },
+        "Reviews":{
+            "title":"TEMOINIAGE"
         }
     },
     "en":{
@@ -96,7 +136,8 @@ lang = {
             "events_link": "Our events",
             "doc_link": "Our documents",
             "contact_link": "Contact us",
-            "join_link": "Join us"
+            "join_link": "Join us",
+            "login_link": "Sign in"
         },
         "Main": {
             "join_us": ["Join us now!"]
@@ -144,7 +185,7 @@ lang = {
             "signed": "SIGNED",
             "docs": "DOCUMENTS",
             "events": "EVENTS",
-            "sponsors": "SPONSORS"
+            "articles": "ARTICLES"
         },
         "Card":{
             "plus":"show more"
@@ -173,6 +214,45 @@ lang = {
             "find_us": "Find us here",
             "contact": "Send us a message",
             "all_rights": "All rights reserved"
+        },
+        "Login": {
+            "title": "LOGIN",
+            "mailHolder": "Email address",
+            "passwordHolder": "Password",
+            "forgotPassword": "Forgot password?",
+            "register": "Not a member yet? register now!"
+        },
+        "Register": {
+            "title": "REGISTER",
+            "nameHolder": "Full name",
+            "addEmail": "Add an email address",
+            "phoneHolder": "Phone number",
+            "addPhone": "Add a phone number",
+            "login": "Already have an account? Sign in!",
+            "townHolder": "Town",
+            "websiteHolder": "Website",
+            "addFax": "Add a fax number",
+            "faxHolder": "Fax number",
+            "company": "Company",
+            "expert": "Expert",
+            "union": "Union",
+            "office": "Office",
+            "default_select": "You are....",
+            "registry": "Registry",
+            "approval": "Approval",
+            "default_select_regType": "Register type",
+            "legal_form": "Legal form",
+            "activity_area": "Activity area",
+            "staff_number": "Staff number",
+            "main_activity": "Main activity",
+            "creation_date": "Creation date",
+            "description": "Description",
+            "area": "Area",
+            "addArea": "Add an area",
+            "companyNameHolder": "Company name"
+        },
+        "Reviews":{
+            "title":"TEMOINIAGE"
         }
     }
     
