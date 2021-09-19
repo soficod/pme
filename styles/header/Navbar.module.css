@@ -1,0 +1,170 @@
+.navbar 
+{
+    width: 100%;
+    height: 60px;
+    border-top: solid rgb(196, 196, 196) 1px;
+    border-bottom: solid rgb(196, 196, 196) 1px;
+}
+
+.navElements
+{
+    width: 90%;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.navElements > a 
+{
+    height: 100%;
+}
+
+.navElements button 
+{
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    font-size: 1em;
+    font-weight: bold;
+    padding-left: 25px;
+    padding-right: 25px;
+    cursor: pointer;
+    height: 100%;
+}
+
+.navElements button:hover
+{
+    color: #f5961a;
+    text-shadow: 2px 2px 2px 2px white;
+} 
+
+@media only screen and (max-width: 800px)
+{
+    .navbar 
+    {
+        background-color: white;
+        display: flex;
+        z-index: 200;
+        justify-content: space-between;
+    }
+    .navMenu 
+    {
+        width: 100%;
+        height: 100vh;
+        background-color: white;
+        z-index: 200;
+        top: 60px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tools
+    {
+        display: flex;
+    }
+
+    .navMenu button 
+    {
+        width: 100%;
+        height: 50px;
+        font-size: 1.2em;
+        border: none;
+        background-color: rgba(0, 0, 0, 0);
+        text-align: left;
+        padding-left: 35px;
+    }
+
+    .navMenu button:hover 
+    {
+        background-color: #f5961a;
+        color: white;
+        cursor: pointer;
+    }
+
+    .ico > button
+    {
+        height: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+        border: none;
+        background-color: rgba(0, 0, 0, 0);
+        cursor: pointer;
+    }
+
+    .adminSubNav 
+    {
+        width: 100px;
+        background-color: white;
+        position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+        right: 0px;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.55);
+        -webkit-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.55);
+        -moz-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.55);
+        overflow: hidden;
+    }
+    
+    .adminSubNav > a
+    {
+        width: 100%;
+    }
+
+    .adminSubNav > a > button 
+    {
+        background-color: white;
+        height: 40px;
+        width: 100%;
+        border: none;
+    }
+
+    .adminSubNav > a > button:hover 
+    {
+        background-color: rgba(207, 207, 207, 0.5);
+        cursor: pointer;
+    }
+
+    .ico > button:hover
+    {
+        background-color: rgba(207, 207, 207, 0.5);
+    }
+
+    .msgNotif+div 
+    {
+        width: 10px;
+        height: 10px;
+        background-color: red;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        margin-left: 25px;
+        margin-top: 13px;
+    }
+
+    .langSelectMobile
+    {
+        width: 70px;
+        position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+        background-color: white;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    .langSelectMobile > button 
+    {
+        width: 100%;
+        border: none;
+        height: 30px;
+        cursor: pointer;
+        background-color: white;
+    }
+
+    .langSelectMobile > button:hover 
+    {
+        background-color: rgba(207, 207, 207, 0.5);
+    }
+}

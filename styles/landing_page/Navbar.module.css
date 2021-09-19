@@ -4,7 +4,7 @@
     height: 60px;
     display: flex;
     justify-content: space-between;
-    z-index: 500;
+    z-index: 300;
 }
 
 .links
@@ -134,4 +134,17 @@
 {
     background-color: royalblue;
     color: white;
+}
+
+.stickyLogo 
+{
+    margin-left: 15px;
+    width: 150px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.stickyLogo img 
+{
+    width: 100%;
 }

@@ -1,0 +1,90 @@
+.searchContainer 
+{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.85);
+    position: fixed;
+    z-index: 300;
+    top: 0;
+    left: 0;
+}
+
+.searchContainer > .cancelIco 
+{
+    position: fixed;
+    font-size: 3em;
+    right: 10px;
+    top: 10px;
+    color: rgb(241, 38, 38);
+    cursor: pointer;
+}
+
+.inputContainer 
+{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: center;
+}
+
+.inputContainer > input 
+{
+    width: 60%;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    border-bottom: solid white 5px;
+    font-size: 2em;
+    outline: none;
+    padding-bottom: 10px;
+    color: white;
+}
+
+.inputContainer::placeholder 
+{
+    color: rgb(211, 211, 211);
+}
+
+.inputContainer > .icoContainer
+{
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    border-bottom: solid white 5px;
+}
+
+.inputContainer > .icoContainer > .searchIco 
+{
+    font-size: 3em;
+    color: rgb(211, 211, 211);
+}
+
+.searchBtn 
+{
+    background-color: rgba(253, 139, 9, 1);
+    border: none;
+    color: white;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+@media only screen and (max-width: 700px)
+{
+    .inputContainer > input 
+    {
+        font-size: 1em;
+    }
+
+    .searchBtn
+    {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .searchContainer > .cancelIco 
+    {
+        font-size: 3em;
+    }
+}

@@ -1,0 +1,22 @@
+.Allevnts_section
+{
+    width:100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+   padding-top: 50px;
+
+
+}
+.events_container
+{
+    width:900px;
+    height:100%;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color:#FAFAFA;
+}

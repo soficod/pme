@@ -1,0 +1,100 @@
+.docsContainer 
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: #E9EBEE;
+}
+
+.docsList 
+{
+    width: 100%;
+    min-height: 100vh;
+    margin-right: 15px;
+}
+
+.filters
+{
+    width: 500px;
+    padding-top: 15px;
+    min-height: 100vh;
+}
+
+.doc
+{
+    margin-top: 15px;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    background-color: white;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+}
+
+.doc:hover 
+{
+    border: solid royalblue 2px;
+}
+
+.docImage 
+{
+    height: 100%;
+    width: 60px;
+    background-size: cover;
+    background-position: center;
+}
+
+.docInfo
+{
+    padding-top: 5px;
+}
+
+.docInfo > h1 
+{
+    margin: 0 0 0 15px;
+    font-size: 1.5em;
+    color: #1561DA;
+}
+
+.docInfo > p 
+{
+    margin: 5px 0 0 15px;
+}
+
+.docInfo > .metaInfo 
+{
+    color: #0D6D2C;
+    font-size: 0.8em;
+}
+
+.filters input  
+{
+    width: 100%;
+    height: 60px;
+    border: none;
+    outline: none;
+    padding-left: 15px;
+    border-radius: 15px;
+    border: solid rgb(175, 175, 175) 1px;
+}
+
+.searchBtn 
+{
+    width: 60%;
+    margin: 15px auto;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    background-color: royalblue;
+}
+
+.searchBtn > button 
+{
+    font-size: 1em;
+    border: none;
+    color: white;
+    height: 100%;
+    background-color: rgba(0,0,0,0);
+}

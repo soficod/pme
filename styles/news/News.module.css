@@ -1,0 +1,150 @@
+.newsContainer
+{
+    width: 90%;
+    margin: auto;
+}
+
+.latestNews
+{
+  width: 100%;
+}
+
+.latestArticle
+{
+  width: 100%;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.infoContainer
+{
+  padding: 15px;
+  background: rgb(0,0,0);
+  background: linear-gradient(0deg, rgba(0,0,0,0.8) 30%, rgba(0,0,0,0) 100%); 
+  color: white;
+  height: 200px;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.infoContainer > h1 
+{
+  font-size: 1.5em;
+}
+
+.infoContainer > div 
+{
+  display: flex;
+}
+
+.infoContainer > div > div  
+{
+  border: none;
+  display: flex;
+}
+
+.infoContainer > div > div > button 
+{
+  border: none;
+  background-color: rgba(0,0,0,0);
+  color: white;
+}
+
+.time 
+{
+  margin-left: 15px;
+}
+
+.readBtn 
+{
+  padding: 12px;
+  border-radius: 2px;
+  border: none;
+  border: solid royalblue 2px;
+  color: white;
+  background-color: rgba(0,0,0,0);
+  cursor: pointer;
+  margin-left: 15px;
+  transition: background-color 0.2s ease;
+}
+
+.readBtn:hover 
+{
+  background-color: royalblue;
+}
+
+.newsCardsContainer 
+{
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 45px auto;
+  flex-wrap: wrap;
+}
+
+.newsCard 
+{
+  width: 300px;
+  height: 450px;
+  box-shadow: 0px 0px 12px -3px rgba(0,0,0,0.25);
+  -webkit-box-shadow: 0px 0px 12px -3px rgba(0,0,0,0.25);
+  -moz-box-shadow: 0px 0px 12px -3px rgba(0,0,0,0.25);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 45px;
+  cursor: pointer;
+}
+
+.newsCard > .img
+{
+  width: 100%;
+  height: 220px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cardInfosContainer 
+{
+  width: 90%;
+  margin: auto;
+}
+
+.titleCard 
+{
+  font-size: 1em;
+}
+
+.cardInfosContainer p 
+{
+  height: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis ellipsis; 
+  font-size: 0.8em;
+}
+
+.pages
+{
+  width: 400px;
+  text-align: center;
+  margin: auto;
+}
+
+@media only screen and (max-width: 800px)
+{
+  .newsCard 
+  {
+    width: 100%;
+  }
+
+  .newsContainer
+  {
+    width: 100%;
+  }
+}

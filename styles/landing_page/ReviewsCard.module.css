@@ -1,0 +1,205 @@
+
+.reviewsContainer
+{
+    display: flex;
+    justify-content: center;
+    width:900px;
+    height:700px;
+    margin:30px auto;
+    background-position: center;
+    background-size:800px;
+    align-items: center;
+    background-image:url(/images/Groupe.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+
+
+    
+
+}
+.content
+{
+    text-align: center;
+    width:650px;
+    min-height:400px;
+    padding-top:80px;
+    margin:auto;
+    position: relative;
+    bottom: 60px;
+    left:50px;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+
+}
+.author
+{
+    color: rgb(255, 219, 60);
+    position: absolute;
+    bottom: 20px;
+    right:250px;
+    font-size: 2em;
+    font-weight: bold;
+
+}
+.text
+{
+    text-align: center;
+    justify-content: center;
+    font-size: 1.4em;
+   
+}
+
+@media only screen and (max-width:1100px)
+{
+    .reviewsContainer
+    {
+        width:600px;
+        height:600px;
+        padding: 40px;
+      
+ 
+
+    }
+    .content{
+       position:absolute;
+       width:450px;
+       min-height:300px;
+       left:100px;
+       bottom:200px ;
+        
+    }
+   .text
+   {
+       font-size:1em;
+   }
+   .author{
+       font-size: 1.4em;
+       position: absolute;
+       bottom:0px;
+       right:25%;
+       left:25%;
+   }
+}
+@media only screen and (max-width:500px)
+{
+    .reviewsContainer
+    {
+        width:400px;
+        height:400px;
+        background-size:400px;
+        left:-10px
+    }
+    .content{
+        
+        width:300px;
+        min-height:200px;  
+        position:absolute;
+        top: 100px;
+        left:70px;
+ 
+    
+        
+    
+    }
+    .text
+    {
+        text-align: center;
+        justify-content: center;
+        font-size: 0.7em;
+        color: white;
+    }
+    .author
+    {
+        font-size: 1em;
+        position: absolute;
+        bottom:0px;
+        right:25%;
+        left:25%;
+
+
+    }
+}
+@media only screen and (max-width:385px)
+{
+    .reviewsContainer
+    {
+        width:380px;
+        height:370px;
+        background-size:330px;
+      
+       
+    
+    }
+    .content{
+        
+        width:250px;
+        min-height:200px;  
+        position:absolute;
+        top: 80px;
+        left:80px;
+        
+    
+    }
+    .text
+    {
+        text-align: center;
+        justify-content: center;
+        font-size: 0.6em;
+        color: white;
+    }
+
+    .author
+    {
+        font-size:0.7em;
+        position: absolute;
+        bottom:0px;
+        right:25%;
+        left:25%;
+    }
+
+}
+@media only screen and (max-width:360px)
+{
+    .reviewsContainer
+    {
+        width:350px;
+        height:340px;
+        background-size:330px;
+        position: absolute;
+        left:-20px;
+       
+    
+    }
+    .content{
+        
+        width:250px;
+        min-height:200px;  
+        position:absolute;
+        top: 80px;
+        left:70px;
+        
+    
+    }
+    .text
+    {
+        text-align: center;
+        justify-content: center;
+        font-size: 0.6em;
+        color: white;
+    }
+
+    .author
+    {
+        font-size:0.8em;
+        position: absolute;
+        bottom:0px;
+        right:25%;
+        left:25%;
+    }
+
+}
