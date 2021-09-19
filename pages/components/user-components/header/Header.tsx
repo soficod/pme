@@ -11,8 +11,9 @@ import LanguageIcon from '@material-ui/icons/Language';
 import { langContext } from '../../../services/langContext';
 import { motion } from 'framer-motion';
 import Search from '../search/Search';
+import PowerOffRounded from '@material-ui/icons/PowerSettingsNew';
 
-const Header = ({isAdmin}:any) => {
+const Header = ({isAdmin, isLogged}:any) => {
     const [dispLang, setDispLang] = useState(false);
     
     const [searchOn, setSearchOn] = useState(false);
@@ -121,7 +122,10 @@ const Header = ({isAdmin}:any) => {
                 </div>
 
                 <div className={styles.sndContainer}>
-                    <a href="#">
+                {
+                    isLogged ?
+                    <>
+                    <a href="/profil">
                         <div className={styles.profil}>
                             <button>
                                 <AccountCircleIcon />
@@ -132,7 +136,7 @@ const Header = ({isAdmin}:any) => {
                         </div>
                     </a>
 
-                    <a href="/chat">
+                    <a href="/messages/all">
                         <div className={styles.message}>
                             <button> 
                                 <MessageIcon style={{cursor: "pointer"}}/>
@@ -156,6 +160,18 @@ const Header = ({isAdmin}:any) => {
                             </div>
                         </a>
                     }
+                    </>
+                    :
+                    <>
+                        <a href="/login">
+                            <div>
+                                <button>
+                                    Connectez-vous
+                                </button>
+                            </div>
+                        </a>
+                    </>
+                }
 
                     <a className={styles.langElem}>
                         <button onClick={e => setDispLang(!dispLang)}>
@@ -199,6 +215,11 @@ const Header = ({isAdmin}:any) => {
                     <button className={styles.search} onClick={e => setSearchOn(true)}>
                         <SearchIcon style={{cursor: "pointer"}}/>
                     </button>
+                    <a href="/logout">
+                        <button className={styles.logout}>
+                            <PowerOffRounded style={{cursor: "pointer"}}/>
+                        </button>
+                    </a>
                 </div>
             </div>
 
@@ -211,6 +232,7 @@ const Header = ({isAdmin}:any) => {
             <Navbar 
                 setSearchOn={setSearchOn}
                 isAdmin={isAdmin}
+                isLogged={isLogged}
             />
 
             <Search

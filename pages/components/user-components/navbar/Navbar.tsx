@@ -4,7 +4,7 @@ import styles from '../../../../styles/header/Navbar.module.css';
 import DesktopNav from './DesktopNav';
 import MobileNav from './MobileNav';
 
-const Navbar = ({setSearchOn, isAdmin}:any) => {
+const Navbar = ({setSearchOn, isAdmin, isLogged}:any) => {
     const [isMobile, setIsMobile] = useState(false);
     
     useEffect(() => {
@@ -19,12 +19,13 @@ const Navbar = ({setSearchOn, isAdmin}:any) => {
         <>
             {
                 !isMobile?
-                <DesktopNav styles={styles} />
+                <DesktopNav styles={styles} isLogged={isLogged} />
                 :
                 <MobileNav 
                     styles={styles} 
                     setSearchOn={setSearchOn}
                     isAdmin={isAdmin}
+                    isLogged={isLogged}
                 />
             }
         </>

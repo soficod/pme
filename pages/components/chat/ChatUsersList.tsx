@@ -1,53 +1,26 @@
 import React from 'react';
 import styles from '../../../styles/chat/Chat.module.css';
 import SearchIcon from '@material-ui/icons/Search';
+import { useRouter } from 'next/router';
 
-interface CharUsersListProps {
-
-}
-
-const ChatUsersList = () => 
+const ChatUsersList = ({users, setSelectedId, selectedId}:any) => 
 {
     const sortByDateTime = (arr:any) => 
     {
         let sortedDate = arr.slice().sort((a:any,b:any) => b.date - a.date);
-        
     }
 
-    const users = [
+    const refreshData = (id:number) => {
+        if(typeof(window) != "undefined")
         {
-            name: "Anis",
-            lastMsg: "Test",
-            time: "17.07",
-            read: false,
-            slug: "#",
-            image: "/images/woman.png",
-            date: "15-03-2020"
-        },
-        {
-            name: "Karim",
-            lastMsg: "Test",
-            time: "17.07",
-            read: true,
-            slug: "#",
-            image: "/images/woman.png",
-            date: "12-03-2020"
-        },
-        {
-            name: "Abdou",
-            lastMsg: "Test",
-            time: "17.07",
-            read: true,
-            slug: "#",
-            image: "/images/woman.png",
-            date: "13-06-2021"
+            window.history.replaceState(null, "Messages", "/messages/"+id);
+            setSelectedId(id);
         }
-
-    ];
+    }
 
     return(
         <div className={styles.menu}>
-            <a href="news">
+            <a href="/news">
                 <button className={styles.backHome}>
                     Retour à l'actualité
                 </button>
@@ -67,20 +40,33 @@ const ChatUsersList = () =>
                 users.map((user:any) => 
                 {
                     return(
-                        <a href={user.slug} className={styles.contactLink}>
+                        <a className={styles.contactLink} onClick={e => refreshData(user.id)}>
                             <div className={styles.contactContainer}
                                 style={{
-                                    backgroundColor: !user.read ? "#c6cbd4a6":"" 
+                                    backgroundColor: user.id == selectedId ? "#c6cbd4a6":"" 
                                 }}
                             
                             >
                                 <div className={styles.pfpContainer}>
+                                {
+                                    user.image ?
                                     <div 
                                         className={styles.pfp}
                                         style={{
                                             backgroundImage: `url(${user.image})`
                                         }}
                                     ></div>
+                                    :
+                                    <button 
+                                        className={styles.pfp + " " + styles.btnIcon}
+                                        style={{
+                                            backgroundColor: user.bgColor
+                                        }}
+                                        
+                                    >
+                                        {user.name[0].toUpperCase()+user.name[1].toUpperCase()}
+                                    </button>
+                                }
                                 </div>
 
                                 <button className={styles.name}>
@@ -89,8 +75,8 @@ const ChatUsersList = () =>
                                     <span 
                                         className={styles.msg}
                                         style={{
-                                            fontWeight: !user.read ? "bold" : "normal",
-                                            color: !user.read ? "black":""
+                                            fontWeight: !user.seen ? "bold" : "normal",
+                                            color: !user.seen ? "black":""
                                         }}
                                     >{user.lastMsg}</span>
                                 </button>

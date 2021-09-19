@@ -25,6 +25,16 @@ const Union = ({infos, setInfos, lang, error}:any) =>
                 className={styles.input}
                 required
             />
+
+            <SelectInput
+                errorMessage={typeof(error.sex) == "undefined" ? "": error.sex}
+                onChange={e => setInfos({...infos, typeInfos:{...infos.typeInfos, sex: e.target.value}})}
+                className={styles.input}
+            >
+                <option selected disabled>Sexe du CEO</option>
+                <option value="man">Homme</option>
+                <option value="woman">Femme</option>
+            </SelectInput>
             
             <TextArea 
                 placeholder={lang.Register.description}

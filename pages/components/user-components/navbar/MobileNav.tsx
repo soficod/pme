@@ -8,7 +8,7 @@ import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import { langContext } from '../../../services/langContext';
 import { motion } from 'framer-motion';
 
-const MobileNav = ({styles, setSearchOn, isAdmin}:any) => {
+const MobileNav = ({styles, setSearchOn, isAdmin, isLogged}:any) => {
     const {lang, changeLanguage} = useContext(langContext);
     const [navOn, setNavOn] = useState(false); 
     const [dispLang, setDispLang] = useState(false);
@@ -124,12 +124,15 @@ const MobileNav = ({styles, setSearchOn, isAdmin}:any) => {
                     }
                 </div>
                 <div className={styles.tools}>
-                    <a className={styles.ico}>
-                        <button className={styles.msgNotif}>
-                            <MessageIcon />
-                        </button>
-                        <div></div>
-                    </a>
+                    {
+                        isLogged && 
+                        <a href="/messages/all" className={styles.ico}>
+                            <button className={styles.msgNotif}>
+                                <MessageIcon />
+                            </button>
+                            <div></div>
+                        </a>
+                    }
 
                     <a className={styles.ico}>
                         <button onClick={e => setDispLang(!dispLang)}>
@@ -174,44 +177,49 @@ const MobileNav = ({styles, setSearchOn, isAdmin}:any) => {
                     </a>
                     
                     {
-                        isAdmin ? 
-                        <a className={styles.ico}>
-                            <button onClick={e => setProfilOn(!profilOn)}>
-                                <AccountCircleIcon />
-                            </button>
-                            {
-                                profilOn &&
-                                <motion.div 
-                                    className={styles.adminSubNav}
-                                    initial={{
-                                        opacity: 0.5,
-                                        y: -10
-                                    }}
+                        isLogged && 
+                        <>
+                        {
+                            isAdmin ? 
+                            <a className={styles.ico}>
+                                <button onClick={e => setProfilOn(!profilOn)}>
+                                    <AccountCircleIcon />
+                                </button>
+                                {
+                                    profilOn &&
+                                    <motion.div 
+                                        className={styles.adminSubNav}
+                                        initial={{
+                                            opacity: 0.5,
+                                            y: -10
+                                        }}
 
-                                    animate={{
-                                        opacity: 1,
-                                        y: 0
-                                    }}
-                                >
-                                    <a href="#">
-                                        <button>
-                                            Profil
-                                        </button>
-                                    </a>
-                                    <a href="#">
-                                        <button>
-                                            Admin
-                                        </button>
-                                    </a>
-                                </motion.div>
-                            }
-                        </a>
-                        :
-                        <a href="#" className={styles.ico}>
-                            <button>
-                                <AccountCircleIcon />
-                            </button>
-                        </a>
+                                        animate={{
+                                            opacity: 1,
+                                            y: 0
+                                        }}
+                                    >
+                                        <a href="#">
+                                            <button>
+                                                Profil
+                                            </button>
+                                        </a>
+                                        <a href="#">
+                                            <button>
+                                                Admin
+                                            </button>
+                                        </a>
+                                    </motion.div>
+                                }
+                            </a>
+                            :
+                            <a href="#" className={styles.ico}>
+                                <button>
+                                    <AccountCircleIcon />
+                                </button>
+                            </a>
+                        }
+                        </>
                     }
                 </div>
             </div>
@@ -230,10 +238,15 @@ const MobileNav = ({styles, setSearchOn, isAdmin}:any) => {
                     }}
                 >
                     <a href="/news"><button>Actualité</button></a>
-                    <a href="/events"><button>Evenements</button></a>
-                    <a href="/Trainings"><button>Formations</button></a>
+                    {
+                        isLogged &&
+                        <>
+                            <a href="/events"><button>Evenements</button></a>
+                            <a href="/Trainings"><button>Formations</button></a>
+                            <a href="/studies"><button>Etudes</button></a>
+                        </>
+                    }
                     <a href="/documents"><button>Documents</button></a>
-                    <a href="/studies"><button>Etudes</button></a>
                 </motion.div>
             }
 
