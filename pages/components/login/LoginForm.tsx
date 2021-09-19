@@ -10,10 +10,7 @@ interface LoginPropsType {
     setEmail:(email:string) => any,
     password: string
     setPassword: (password: string) => any
-    error: {
-        email: string 
-        password: string
-    }
+    error: any
     onSubmit: () => any
 }
 
@@ -44,7 +41,7 @@ const LoginForm = ({
                         Icon={AlternateEmailIcon}
                         type="email"
                         placeholder={lang.Login.mailHolder}
-                        errorMessage={error.email}
+                        errorMessage={typeof(error.email) != "undefined" ? error.email : ""}
                         value={email}
                         onChange={e => setEmail(e.target.value)}
                         required
@@ -54,7 +51,7 @@ const LoginForm = ({
                         Icon={LockIcon}
                         placeholder={lang.Login.passwordHolder}
                         type="password"
-                        errorMessage={error.password}
+                        errorMessage={typeof(error.password) != "undefined" ? error.password : ""}
                         value={password}
                         onChange={e => setPassword(e.target.value)}
                         required

@@ -9,14 +9,18 @@ async function signUp (
 {
     if(req.method === "POST")
     {
+        console.log("Processing the request...");
+        console.log("data", req.body);
         const user = await axios.post(process.env.NEXT_PUBLIC_BACKEND_HOST+'/api/register', req.body).catch(err => 
         {
-            console.log(err);
-            return res.status(err.response.status).json({data: err.response.data});
+            console.log("Error in the request");
+            res.status(err.response.status).json({data: err.response.data});
         });
 
-        console.log(user.data)
         await req.session.set("pmei-user-token", user.data.token);
+        await req.session.save();
+        console.log(req.session.get("pmei-user-token"));
+        //console.log(user);
         return res.status(201).send("");
     }
     else 

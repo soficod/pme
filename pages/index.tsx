@@ -56,43 +56,21 @@ const Home = ({counts, events, documents}:any) => {
 
 Home.getInitialProps = async () => 
 {
-    /*const counts = await axios.get(process.env.NEXT_PUBLIC_BACKEND_HOST+'/api/statistics/count/all').catch(err => 
+    const counts:any = await axios.get(process.env.NEXT_PUBLIC_BACKEND_HOST+'/api/statistics/count/all').catch(err => 
     {
       console.log("error: ", err);
     });
 
-    const events = await axios.get(process.env.NEXT_PUBLIC_BACKEND_HOST+'/api/events').catch(err => 
+    const events:any = await axios.get(process.env.NEXT_PUBLIC_BACKEND_HOST+'/api/events').catch(err => 
     {
       console.log("error: ", err);
     });
 
-    const documents = await axios.get(process.env.NEXT_PUBLIC_BACKEND_HOST+'/api/documents').catch(err => 
+    const documents:any = await axios.get(process.env.NEXT_PUBLIC_BACKEND_HOST+'/api/documents').catch(err => 
     {
       console.log("error: ", err);
-    });*/
-
-    const counts = {
-      data: {
-        data: {
-          events: 0,
-          members: 0,
-          documents: 0,
-          articles: 0
-        }
-      }
-    }
-
-    const events = {
-      data: {
-        data: []
-      }
-    }
-
-    const documents = {
-      data: {
-        data: []
-      }
-    }
+    });
+    
     return {
         counts: counts.data.data,
         events: events.data.data,

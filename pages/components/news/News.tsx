@@ -29,56 +29,59 @@ const News = ({articles}:any) => {
 
     return(
         <div className={styles.newsContainer}>
-            <Carousel 
-                isRTL={false} 
-                enableAutoPlay className={styles.latestNews}
-                autoPlaySpeed={4000}
-                ref={carouselRef}
-                onNextEnd={({ index }) => {
-                    console.log(index, articles.slice(0,articles.length > 5 ? -5 : -articles.length).length)
-                    if (index + 1 === articles.slice(0,articles.length > 5 ? -5 : -articles.length).length - 1) 
-                    {
-                        setTimeout(() => 
+            {
+            articles.length > 0 ?
+            <>
+                <Carousel 
+                    isRTL={false} 
+                    enableAutoPlay className={styles.latestNews}
+                    autoPlaySpeed={4000}
+                    ref={carouselRef}
+                    onNextEnd={({ index }) => {
+                        console.log(index, articles.slice(0,articles.length > 5 ? -5 : -articles.length).length)
+                        if (index + 1 === articles.slice(0,articles.length > 5 ? -5 : -articles.length).length - 1) 
                         {
-                            carouselRef.current.goTo(0)
-                        }, 6000);
+                            setTimeout(() => 
+                            {
+                                carouselRef.current.goTo(0)
+                            }, 6000);
+                        }
+                    }}
+                >
+                    {
+                        articles.slice(0, (articles.length > 5 ? 5 : articles.length)).map(ln => {
+                            return(
+                                <NewsBigCard
+                                    title={ln.title}
+                                    slig={ln.slug}
+                                    image={ln.images[0]}
+                                    created_at={getDateTime(ln.created_at)}
+                                    poster={ln.poster}
+                                />
+                            )
+                        })
                     }
-                }}
-            >
-                {
-                    articles.slice(0, (articles.length > 5 ? 5 : articles.length)).map(ln => {
-                        return(
-                            <NewsBigCard
-                                title={ln.title}
-                                slig={ln.slug}
-                                image={ln.images[0]}
-                                created_at={getDateTime(ln.created_at)}
-                                poster={ln.poster}
-                            />
-                        )
-                    })
-                }
-            </Carousel>
+                </Carousel>
 
-            <div className={styles.newsCardsContainer}>
-                {
-                    articles.map(ln => {
-                        return(
-                            <NewsSmallCard
-                                title={ln.title}
-                                slig={ln.slug}
-                                image={ln.images[0]}
-                                created_at={getDateTime(ln.created_at)}
-                                poster={ln.poster}
-                                content={ln.content}
-                            />
-                        )
-                    })
-                }
+                <div className={styles.newsCardsContainer}>
+                    {
+                        articles.map(ln => {
+                            return(
+                                <NewsSmallCard
+                                    title={ln.title}
+                                    slig={ln.slug}
+                                    image={ln.images[0]}
+                                    created_at={getDateTime(ln.created_at)}
+                                    poster={ln.poster}
+                                    content={ln.content}
+                                />
+                            )
+                        })
+                    }
 
-            </div>
+                </div>
 
-            <div 
+                <div 
                 className={styles.pages}
                 style={{
                     marginBottom: "15px"
@@ -86,6 +89,14 @@ const News = ({articles}:any) => {
             >
                 <Pagination count={10} variant="outlined" color="primary" />
             </div>  
+            </>
+            :
+            <>
+                <h1>
+                    Aucun article disponible.
+                </h1>
+            </>
+            }
         </div>
     );
 }

@@ -85,6 +85,16 @@ const CompanyForm = ({infos, setInfos, lang, error, activities}:any) =>
                 required
             />
 
+            <SelectInput
+                errorMessage={typeof(error.sex) == "undefined" ? "": error.sex}
+                onChange={e => setInfos({...infos, typeInfos:{...infos.typeInfos, sex: e.target.value}})}
+                className={styles.input}
+            >
+                <option selected disabled>Sexe du CEO</option>
+                <option value="man">Homme</option>
+                <option value="woman">Femme</option>
+            </SelectInput>
+
             <div className={styles.sameLine}>
                 <div>
                     <SelectInput

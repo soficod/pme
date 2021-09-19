@@ -6,6 +6,7 @@ import axios from 'axios';
 import Swal from 'sweetalert2';
 import { useRouter } from 'next/router';
 import { withIronSession } from "next-iron-session";
+import { session_option } from '../pme-data/cookie-option';
 
 interface activityArrayType {
     value: number
@@ -22,6 +23,7 @@ interface registerPropsType {
     zones: activityArrayType[]
     activities: activityArrayType[]
     wilayas: wilaya[] 
+    user_token: string
 }
 
 const Register = ({zones, activities, wilayas}:registerPropsType) => 
@@ -71,20 +73,20 @@ const Register = ({zones, activities, wilayas}:registerPropsType) =>
         }).catch(err => 
         {
             let errors = {};
-            /*Object.keys(err.response.data.errors).forEach(errorKey => 
+            Object.keys(err.response.data.data.errors).forEach(errorKey => 
             {
-                errors[errorKey] = err.response.data.errors[errorKey][0];
+                errors[errorKey] = err.response.data.data.errors[errorKey][0];
             });
 
             Swal.fire(
                 "ATTENTION",
                 "Vérifiez les informations entrée.",
                 "error"
-            )*/
+            )
 
             console.log(err);
 
-            /*setError(errors);*/
+            setError(errors);
         });
     }
 
@@ -109,42 +111,41 @@ const Register = ({zones, activities, wilayas}:registerPropsType) =>
     );
 }
 
-export const getServerSideProps = withIronSession(async ({req, res}:any) => 
-{
-    console.log(process.env.NEXT_PUBLIC_COOKIE_PWD);
-    /*const activities = await axios.get(process.env.NEXT_PUBLIC_BACKEND_HOST+'/api/data/activity-areas').catch(err => 
+export const getServerSideProps = withIronSession(async ({req, res}:any) => {
+    const user_token = req.session.get("pmei-user-token");
+    if(typeof(user_token) != "undefined" && user_token)
+    {
+        return {
+            redirect: {
+                permanent: false,
+                destination: "/news"
+            }
+        }
+    }
+    
+    /*const activities:any = await axios.get(process.env.NEXT_PUBLIC_BACKEND_HOST+'/api/data/activity-areas').catch(err => 
     {
       console.log("error: ", err);
     });
 
-    const zones = await axios.get(process.env.NEXT_PUBLIC_BACKEND_HOST+'/api/areas/parents').catch(err => 
+    const zones:any = await axios.get(process.env.NEXT_PUBLIC_BACKEND_HOST+'/api/areas/parents').catch(err => 
     {
         console.log("error: ", err);
     });
 
-    const wilayas = await axios.get(process.env.NEXT_PUBLIC_BACKEND_HOST+'/api/data/wilayas').catch(err => 
+    const wilayas:any = await axios.get(process.env.NEXT_PUBLIC_BACKEND_HOST+'/api/data/wilayas').catch(err => 
     {
         console.log("error: ", err);
     });*/
 
     return {
         props:{
-            zones: [], //zones.data.data,
-            activities: [], // activities.data,
-            wilayas: [{
-                id: 16,
-                name: "Alger"
-            }] //wilayas.data
+            zones: [],//zones.data.data,
+            activities: [],//activities.data,
+            wilayas: []//wilayas.data
         }
     }
     
-},
-{
-    cookieName: "PMEI_USER_TOKEN",
-    cookieOptions: {
-      secure: process.env.NODE_ENV === "production"
-    },
-    password: process.env.NEXT_PUBLIC_COOKIE_PWD
-});
+},session_option);
 
 export default Register;
