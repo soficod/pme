@@ -54,9 +54,44 @@ const Sponsors = () =>
                             }
                         </Carousel>
                     </div>
+                        
+                    <div className={styles.sponsorSeparator}></div>
+
+                    <div className={styles.organizer}>
+                        <h1>{lang.Sponsors.partners}</h1>
+                        <br/>
+                        <Carousel 
+                            ref={carouselRef2}
+                            isRTL={true} 
+                            itemsToShow={3}
+                            showArrows={false}
+                            enableAutoPlay={true}
+                            pagination={false}
+                            onNextEnd={({ index }) => {
+                                if (index + 1 === partners.length-2) 
+                                {
+                                    setTimeout(() => 
+                                    {
+                                        carouselRef2.current.goTo(0)
+                                    }, 2000);
+                                }
+                            }}
+                        >
+                            {
+                                partners.map(partner => {
+                                    return(
+                                        <button>
+                                            <img className={styles.logoCarousel} src={partner.img} alt={partner.alt} />
+                                        </button>
+                                    );
+                                })
+                            }
+                        </Carousel>
+                    </div>
                 </div>
                 
-                <h1>{lang.Sponsors.partners}</h1>
+                <h1>{lang.Sponsors.sponsors}</h1>
+                
                 <div className={styles.sndHalf}>
                     <SponsorCard
                         images={silverSponsors}

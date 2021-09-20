@@ -9,7 +9,32 @@ import { colorMix } from 'tsparticles/Utils';
 
 
 
-const Cover=({content, slugPage}:any)=>{
+const Cover=()=>{
+
+    const content=[
+        {
+            title:'first Event',
+            Description:'Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras justo odio, dapibus ac facilisis.',
+            image:'/images/cover.jpg',
+            date:'23/05/2021',
+            user: 'Luan Gjokaj'
+        },
+        {
+            title:'Second Event',
+            Description:'Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras justo odio, dapibus ac facilisis.',
+            image:'/images/business-colleagues-rooftop-talking.jpg',
+            date:'23/05/2021',
+            user: 'Erich Behrens'
+        },
+        {
+            title:'Third Event',
+            Description:'Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras justo odio, dapibus ac facilisis.',
+            image:'/images/corporate-businessman.jpg',
+            date:'23/05/2021',
+            user: 'Bruno Vizovskyy'
+        }
+
+    ]
 
     return(
         <div className={styles.sliderC}>
@@ -22,35 +47,33 @@ const Cover=({content, slugPage}:any)=>{
                 content.map((item,index)=> {
                         return(
                             <div
+                        
 
                             key={index}
                             className={styles.slider_content}
                             
                             style={{
-                                background: `url(${item.images[0]}) no-repeat center center`,
+                                background: `url('${item.image}') no-repeat center center`,
                                 backgroundSize:`cover`
                             
                             }}
                         >
                             <div
                                 className={styles.inner}>
-                                <h1 className={styles.title}>{item.name}</h1>
+                                <h1 className={styles.title}>{item.title}</h1>
                                 <p>{item.Description}</p>
                                 <div className={styles.info}>
-                                    <p className={styles.organizer}>
-                                    <span style={{color:'rgba(230, 228, 228, 0.657)'}}>Posted by</span> <strong style={{color:'rgba(230, 228, 228, 0.657)'}}>{item.organizer}</strong> 
+                                    <p className={styles.poster}>
+                                    <span style={{color:'rgba(230, 228, 228, 0.657)'}}>Posted by</span> <strong style={{color:'rgba(230, 228, 228, 0.657)'}}>{item.user}</strong> 
                                     </p>
-                                    <p style={{color:'rgba(230, 228, 228, 0.657)'}}>Le <strong style={{color:'rgba(230, 228, 228, 0.657)'}}>{item.start}</strong></p>
+                                    <p style={{color:'rgba(230, 228, 228, 0.657)'}}>Le <strong style={{color:'rgba(230, 228, 228, 0.657)'}}>{item.date}</strong></p>
                                 </div>
                         <div>
-                            <a href={slugPage+"/"+item.slug}>
-                                <button 
-                                    className={styles.read}
-                                    >
-                                    En savoir plus
-                                </button>
-                            </a>
-                        </div>
+                            <button 
+                                className={styles.read}
+                                >
+                                 read more
+                            </button></div>
                         </div>
                     
                       

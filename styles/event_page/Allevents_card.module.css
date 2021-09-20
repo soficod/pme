@@ -60,19 +60,12 @@
 }
 .more:hover
 {
-    color: rgb(0, 137, 223);
-    transition: background-color 0.5s ease, margin-left 0.5s ease;
+color: rgb(0, 137, 223);
+transition: background-color 0.5s ease;
 }
-
 .arrow
 {
     position: relative;
     top:7px;
-    margin-left: 0;
-    transition: margin-left 0.5s ease;
-}
 
-.more:hover .arrow 
-{
-    margin-left: 15px;
 }

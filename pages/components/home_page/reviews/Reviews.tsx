@@ -4,6 +4,8 @@ import styles from '../../../../styles/landing_page/Reviews.module.css';
 import { motion } from 'framer-motion';
 import Carousel from 'react-elastic-carousel';
 import ReviewsCard from'./ReviewsCard'
+
+
 const Reviews = ()=>{
     const {lang, changeLanguage}:any = useContext(langContext);
     return(

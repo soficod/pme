@@ -3,6 +3,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
 import LanguageIcon from '@material-ui/icons/Language';
 import { langContext } from '../../../services/langContext';
+import { motion } from 'framer-motion';
 
 const MobileNav = ({styles}:any) => {
     const {lang, changeLanguage} = useContext(langContext);
@@ -23,8 +24,16 @@ const MobileNav = ({styles}:any) => {
                         </button>
                         {
                             dispLang &&
-                            <div 
-                                className={"scale-up " + styles.langSelectMobile} id="langs"
+                            <motion.div 
+                                className={styles.langSelectMobile} id="langs"
+                                initial={{
+                                    scale: 0,
+                                    y: -30
+                                }}
+                                animate={{ 
+                                    scale: 1,
+                                    y: -10
+                                }}
                             >
                                 <button onClick={e => {
                                             changeLanguage('en');
@@ -41,7 +50,7 @@ const MobileNav = ({styles}:any) => {
                                 }>
                                     FR
                                 </button>
-                            </div>
+                            </motion.div>
                         }
                     </a>
                 </div>
@@ -59,59 +68,32 @@ const MobileNav = ({styles}:any) => {
                                 height: "100%"
                             }}/>
 
-                            <div 
-                                className={"scroll-down " + styles.navElementsMobile} 
+                            <motion.div 
+                                className={styles.navElementsMobile} 
                                 style={{
                                     position:"fixed"
+                                }}
+                                initial={{
+                                    scale:0,
+                                    y: 100
+                                }}
+                                animate={{
+                                    scale:1,
+                                    y: 0
                                 }}
                             >
                             {
                                 Object.keys(lang.Navbar).map(link => {
                                     return (
-                                        <>
-                                            {
-                                                link === "news_link" ?
-                                                <a 
-                                                    href="news"
-                                                >
-                                                    
-                                                    <button className={styles.navElemMobile}>
-                                                        {lang.Navbar[link]}
-                                                    </button>
-                                                </a>
-                                                :
-                                                <>
-                                                    {
-                                                        link === "join_link"?
-                                                        <a href="login">
-                                                            <button className={styles.navElemMobile}>
-                                                                {lang.Navbar[link]}
-                                                            </button>
-                                                        </a>
-                                                        :
-                                                        <a 
-                                                            onClick={e => {
-                                                                window.scrollTo({
-                                                                    top: document.getElementById(link).offsetTop,
-                                                                    behavior: "smooth"
-                                                                });
-                                                                setNavOn(false);
-                                                            }}
-                                                        >
-                                                            
-                                                            <button className={styles.navElemMobile}>
-                                                                {lang.Navbar[link]}
-                                                            </button>
-                                                        </a>
-                                                    }
-        
-                                                </>
-                                            }
-                                        </>
+                                        <a href={"#"+link}>
+                                            <button className={styles.navElemMobile}>
+                                                {lang.Navbar[link]}
+                                            </button>
+                                        </a>
                                     )
                                 })
                             }
-                            </div>
+                            </motion.div>
                         </>
                     }
                 </div>

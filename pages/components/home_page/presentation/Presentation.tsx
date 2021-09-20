@@ -1,42 +1,31 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import { langContext } from '../../../services/langContext';
+import { motion } from 'framer-motion';
 import styles from '../../../../styles/landing_page/Presentation.module.css';
 
 const Presentation = () => 
 {
     const {lang, changeLanguage} = useContext(langContext);
-    const [on, setOn] = useState(false);
-
-    useEffect(() => 
-    {
-        setOn(window.scrollY >= document.getElementById("presentation_link").offsetTop);
-        window.addEventListener('scroll', e => 
-        {
-            if(document.readyState === 'complete' && 
-                !on && 
-                (window.scrollY >= document.getElementById("presentation_link").offsetTop))
-            {
-                setOn(true);
-            }
-        });
-    }, []);
-
     return(
         <>
-            <div id="presentation_link" className={styles.presentationContainer}>
+            <div className={styles.presentationContainer}>
                     <div className={styles.shape}></div>
 
                     <div className={styles.arrow}></div>
                     <div className={styles.arrowhite}></div>
                 <div className={styles.maincontainer}>
-                {
-                    on &&
-                    <>
-                    <div className={styles.box}></div> 
-                
-                    <div 
-                        className={"slide-r2l " + styles.container}
-
+                <div className={styles.box}></div> 
+                    <motion.div 
+                        className={styles.container}
+                        initial={{
+                            x:100,
+                            opacity:0
+                        }}
+                        animate ={{
+                            x:0,
+                            opacity:1
+                        }}
+                        
                     >
                         { 
                             typeof(lang.Presentation) != "undefined"
@@ -68,20 +57,26 @@ const Presentation = () =>
                             </>
                         }
                         
-                    </div>  
+                    </motion.div>  
                     
 
-                    <div 
-                        className={"slide-l2r "+styles.imageContainer }
-                        
+                    <motion.div 
+                        className={styles.imageContainer }
+                        initial={{
+                            x:-100,
+                            opacity:0
+                        }}
+                        animate ={{
+                            x:0,
+                            opacity:1
+                        }}
                     >
                         <img className={styles.image_1} src="images/Rectangle.png"/>
                         <img className={styles.imglobal} src="images/woman.png"/>
                         <img className={styles.image_2} src="images/Tracé.png"/>
                 
-                    </div>
-                    </>
-                }
+                    </motion.div>
+                
             
                 </div>
             </div>

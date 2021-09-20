@@ -26,22 +26,10 @@ a {
   height: 5px;
 }
 
-.linkInput:hover
-{
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-.linkInput 
-{
-  color: rgb(0, 114, 167);
-}
-
 button 
 {
   -webkit-tap-highlight-color: transparent;
 }
-
 .rec.rec-dot {
 
   background-color: transparent;
@@ -79,172 +67,15 @@ button
   color:#fff;
   
 }
+.image-gallery
+{
+  width:90%;
+  margin-left: 30px;
+}
 @media only screen and (max-width:700px)
 {
   .rec.rec-arrow{
     display: none;
   }
-}
-
-.fade-in
-{
-  animation: fadeIn 2s;
-}
-
-@keyframes fadeIn 
-{
-  0% {opacity:0;}
-  100% {opacity:1;}
-}
-
-.scroll-up
-{
-  animation: scrollUp 2s;
-}
-
-@keyframes scrollUp 
-{
-  0% {transform: translateY(50px);}
-  100% {transform: translateY(0);}
-}
-
-.scale-up-hover
-{
-  transform: scale(1);
-  transition: all .2s;
-}
-
-.scale-up-hover:hover
-{
-  transform: scale(1.1);
-}
-
-.scale-down-tap,.scale-down-hover
-{
-  transition: transform 0.2s;
-}
-
-.scale-down-tap:active
-{
-  transform: scale(0.9);
-}
-
-.scale-down-hover:hover
-{
-  transform: scale(0.9);
-}
-
-.slide-r2l
-{
-  animation: slideRTL 2s;
-}
-
-@keyframes slideRTL 
-{
-  0% {
-    transform: translateX(50px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-.slide-l2r
-{
-  animation: slideLTR 2s;
-}
-
-@keyframes slideLTR 
-{
-  0% {
-    transform: translateX(-50px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-
-.delay-0-25
-{
-  animation-delay: 0.25s;
-}
-
-.delay-0-5
-{
-  animation-delay: 0.5s;
-}
-
-.delay-0-75
-{
-  animation-delay: 0.75s;
-}
-
-.delay-1
-{
-  animation-delay: 1s;
-}
-
-.scale-up
-{
-  animation: scaleUp 1s;
-}
-
-@keyframes scaleUp
-{
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-.scroll-down
-{
-  animation: scrollDown 1s;
-}
-
-@keyframes scrollDown
-{
-  0% {transform: translateY(-50px);}
-  100% {transform: translateY(0);}
-}
-
-.focus-padding-scroll-left-without-icon
-{
-  padding-left: 25px;
-  transition: padding-left 0.2s;
-}
-
-.hover-padding-scroll-left
-{
-  padding-left: 0;
-  transition: padding-left 0.2s;
-}
-
-.hover-padding-scroll-left:hover 
-{
-  padding-left: 10px;
-}
-
-.focus-padding-scroll-left-icon
-{
-  padding-left: 0;
-  transition: padding-left 0.2s;
-}
-
-.focus-padding-scroll-left-icon:focus
-{
-  padding-left: 10px;
-} 
-
-.focus-padding-scroll-left-without-icon:focus
-{
-  padding-left: 35px;
 }
 

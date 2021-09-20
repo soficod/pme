@@ -1,12 +1,13 @@
 import { string } from 'prop-types'
 import React, { useState, useContext } from 'react'
+import Slider from 'react-animated-slider';
 import 'react-animated-slider/build/horizontal.css';
 import { motion } from 'framer-motion';
 import { langContext } from '../../../services/langContext';
 import styles from '../../../../styles/event_page/SlidesEvent.module.css';
 import Carousel from 'react-elastic-carousel';
 import EventCard from './EventCard';
-const SlidesEvent=({recentEvents, slugPage}:any)=>{
+const SlidesEvent=()=>{
 
     const breakPoints = [
         { width: 1, itemsToShow: 1 },
@@ -14,7 +15,6 @@ const SlidesEvent=({recentEvents, slugPage}:any)=>{
         { width: 768, itemsToShow: 1},
         { width: 1100, itemsToShow: 3 }
     ]
-
     return(
         
         <section className={styles.slideContainer}>
@@ -26,20 +26,10 @@ const SlidesEvent=({recentEvents, slugPage}:any)=>{
                 
                 <div className={styles.container} >
                     <Carousel isRTL={true} breakPoints={breakPoints} showArrows={false}    enableSwipe={true}>
-                        {
-                            recentEvents.map((ev:any) => {
-                                return(
-                                    <a href={slugPage+"/"+ev.slug}>
-                                        <EventCard
-                                            title={ev.name}
-                                            date={ev.start}
-                                            poster={ev.organizer}
-                                        />
-                                    </a>
-                                )
-                            })
-                        }
-                        
+                    <EventCard/>
+                    <EventCard/>
+                    <EventCard/>
+                    <EventCard/>
                     </Carousel>
 
                 </div>

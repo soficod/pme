@@ -5,29 +5,19 @@ import { motion } from 'framer-motion';
 import { colorMix } from 'tsparticles/Utils';
 import Allevents_card from './Allevents_card';
 import Pagination from '@material-ui/lab/Pagination';
-const Allevents=({events, slugPage}:any)=>{
+const Allevents=()=>{
 
     return(
         <section className={styles.Allevnts_section}>
 
             <div className={styles.events_container}>
-                  
-                {
-                    events.map((event:any) => 
-                    {
-                        return(
-                            <Allevents_card
-                                title={event.name}
-                                images={event.images}
-                                date={event.start}
-                                poster={event.organizer}
-                                description={event.description}
-                                slug={slugPage+"/"+event.slug}
-                            />
-                        )
-                    })
-                }
-                <Pagination count={10} variant="outlined" color="primary" />
+                  <Allevents_card/>
+                  <Allevents_card/>
+                  <Allevents_card/>
+                  <Allevents_card/>
+                  <Allevents_card/>
+                  <Allevents_card/>
+                  <Pagination count={10} variant="outlined" color="primary" />
 
             </div>
 

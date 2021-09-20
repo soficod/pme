@@ -1,0 +1,89 @@
+.sectionContainer
+{
+    width:100%;
+    height:100%;
+    background-color: rgb(233,235,238);
+}
+.container
+{
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction:row-reverse;
+   
+
+
+}
+.filterContainer
+{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+.filter
+{
+    display:flex;
+    flex-direction: column;
+    
+    margin-right: 30px;
+    justify-items: center;
+  
+}
+.searchBar
+{
+    width:400px;
+    height:60px;
+   
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    border: 3px solid rgb(230,230,230);
+    outline: none;
+    -moz-padding-start: 10px;
+    -webkit-padding-end: 20px;
+    -moz-padding-end: 10px;
+    -webkit-padding-start: 20px;
+
+   
+
+}
+.searchBar:focus
+{
+    border: 3px solid rgb(221, 220, 220);  
+}
+.searchButton
+{
+    width:200px;
+    height:50px;
+    text-align:center;
+    margin:0px auto;
+    background-color: royalblue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1em;
+  
+
+}
+.membersContainer
+{
+    margin-top: 40px;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    background-color: azure;
+  
+}
+.member
+{
+    height: 100%;
+    width:100px;
+    display: flex;
+    flex-direction: row;
+
+}
+.member img
+{
+    width: 30px;
+}
